@@ -31,4 +31,4 @@ app.use("/api/user", userRoute);
 app.use("/api/workout", workoutRoute);
 app.use("/api/exercise", exerciseRoute);
 
-app.listen(process.env.PORT || 3001, ()=> {console.log("starting server");});
+app.listen(5000, ()=> {console.log("starting server");});
