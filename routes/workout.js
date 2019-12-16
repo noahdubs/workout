@@ -51,5 +51,27 @@ router.post("/", (req, res)=>{
     })
 })
 
+// update workout
+router.put("/:workoutId", (req, res)=>{
+    Workout.findByIdAndUpdate(req.params.workoutId, req.body, (err, workout)=>{
+        if(err) {
+            console.log(err);
+        } else {
+            res.json(workout);
+        }
+    });
+});
+
+// delete workout
+router.delete("/:workoutId", (req, res)=>{
+    Workout.findByIdAndDelete(req.params.workoutId, (err)=>{
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/");
+        }
+    })
+})
+
 
 module.exports = router;
