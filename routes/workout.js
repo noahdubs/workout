@@ -5,6 +5,19 @@ const express = require("express"),
 
 const router = express.Router({mergeParams: true});
 
+// get all workouts
+router.get("/", (req, res)=>{
+    Workout.find({}, (err, workouts)=>{
+        if(err) {
+            console.log(err);
+        } else {
+            res.json(workouts);
+        }
+    });
+});
+
+
+// get one workout
 router.get("/:workoutId", (req, res)=>{
     Workout.findById(req.params.workoutId).populate("exercises").exec((err, foundWorkout)=>{
         if(err) {
@@ -15,6 +28,8 @@ router.get("/:workoutId", (req, res)=>{
     });
 });
 
+
+// post workout
 router.post("/", (req, res)=>{
     User.findById(req.params.userId, (err, user)=>{
         if(err) {

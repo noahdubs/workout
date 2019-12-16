@@ -17,7 +17,7 @@ router.post("/register", (req, res)=>{
             console.log(err);
         }
         passport.authenticate("local")(req, res, ()=>{
-            res.redirect("/user/" + user._id);
+            res.json(user);
         });
     });
 });
@@ -30,5 +30,7 @@ router.get("/logout", (req, res)=>{
     req.logOut();
     res.redirect("/");
 })
+
+
 
 module.exports = router;
