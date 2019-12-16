@@ -33,7 +33,7 @@ app.use(
     })
 );
 app.use("/api", indexRoute);
-app.use("/api/user", userRoute);
+app.use("/api/users", userRoute);
 app.use("/api/workout", workoutRoute);
 app.use("/api/exercise", exerciseRoute);
 

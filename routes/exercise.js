@@ -30,7 +30,7 @@ router.get("/:exerciseId", (req, res)=>{
 });
 
 router.post("/", (req, res)=>{
-    console.log(req.params);
+    console.log(req.body);
     Exercise.create(req.body, (err, exercise)=>{
         if(err) {
             console.log(err);
@@ -38,7 +38,7 @@ router.post("/", (req, res)=>{
             exercise.author.id = req.user._id;
             exercise.author.username = req.user.username;
             exercise.save();
-            res.send(exercise);
+            res.json(exercise);
         }
     });
 });
