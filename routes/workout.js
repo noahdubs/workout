@@ -1,7 +1,7 @@
 const express = require("express"),
-      passport = require("passport"),
       User = require("../models/user"),
-      Workout = require("../models/workout");
+      Workout = require("../models/workout"),
+      middleware = require("../middleware/index");
 
 const router = express.Router({mergeParams: true});
 
@@ -19,36 +19,35 @@ router.get("/", (req, res)=>{
 
 // get one workout
 router.get("/:workoutId", (req, res)=>{
-    Workout.findById(req.params.workoutId).populate("exercises").exec((err, foundWorkout)=>{
+    Workout.findById(req.params.workoutId).populate("exercises").exec((err, workout)=>{
         if(err) {
             console.log(err);
         } else {
-            res.json(foundWorkout);
+            res.json(workout);
         }
     });
 });
 
 
 // post workout
-router.post("/", (req, res)=>{
-    User.findById(req.params.userId, (err, user)=>{
-        if(err) {
-            console.log(err);
-        } else {
-            Workout.create(req.body, (err, workout)=>{
-                if(err){
-                    console.log(err);
-                } else {
-                    workout.author.id = user._id;
-                    workout.author.username = user.username;
-                    workout.save();
-                    user.workouts.push(workout);
-                    user.save();
-                    res.redirect("/workout/"+workout._id);
-                }
-            })
-        }
-    })
+router.post("/", middleware.isLoggedIn, (req, res)=>{
+   const name = req.body.name
+   const exercises = req.body.exerciseId
+   Workout.create({name:name}, (err, workout)=>{
+       if(err) {
+           console.log(err);
+       } else {
+           exercises.forEach((exercise) => {
+               workout.exercises.push(exercise)
+           });
+           workout.author.id = req.user._id;
+           workout.author.username = req.user.username;
+           workout.author.name = req.user.name;
+           workout.save();
+           console.log(workout);
+           res.redirect("/workout/" + workout._id)
+       }
+   })
 })
 
 // update workout

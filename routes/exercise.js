@@ -1,7 +1,8 @@
 const express = require("express"),
       passport = require("passport"),
       User = require("../models/user"),
-      Exercise = require("../models/exercise");
+      Exercise = require("../models/exercise"),
+      middleWare = require("../middleware/index");
 
 const router = express.Router({mergeParams: true});
 
@@ -29,7 +30,7 @@ router.get("/:exerciseId", (req, res)=>{
     });
 });
 
-router.post("/", (req, res)=>{
+router.post("/", middleWare.isLoggedIn, (req, res)=>{
     console.log(req.body);
     Exercise.create(req.body, (err, exercise)=>{
         if(err) {
@@ -38,12 +39,12 @@ router.post("/", (req, res)=>{
             exercise.author.id = req.user._id;
             exercise.author.username = req.user.username;
             exercise.save();
-            res.json(exercise);
+            res.redirect("/exercise/" + exercise._id);
         }
     });
 });
 
-router.put("/:exerciseId", (req, res)=>{
+router.put("/:exerciseId", middleWare.isLoggedIn, (req, res)=>{
     Exercise.findByIdAndUpdate(req.params.exerciseId, req.body, (err, updatedExercise)=>{
         if(err) {
             console.log(err);
@@ -53,7 +54,7 @@ router.put("/:exerciseId", (req, res)=>{
     });
 });
 
-router.delete("/:exerciseId", (req, res)=>{
+router.delete("/:exerciseId", middleWare.isLoggedIn, (req, res)=>{
     Exercise.findByIdAndDelete(req.params.exerciseId, (err)=>{
         if(err) {
             console.log(err);

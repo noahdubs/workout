@@ -1,6 +1,7 @@
 const express = require("express"),
       passport = require("passport"),
-      User = require("../models/user");
+      User = require("../models/user"),
+      middleware = require("../middleware/index")
 
 const router = express.Router({mergeParams: true});
 
@@ -27,7 +28,7 @@ router.get("/", (req, res)=>{
 });
 
 // update
-router.put("/:userId", (req, res)=>{
+router.put("/:userId", middleware.isLoggedIn, (req, res)=>{
     User.findByIdAndUpdate(req.params.userId, req.body, (err, updatedUser)=>{
         if(err) {
             console.log(err);
@@ -38,7 +39,7 @@ router.put("/:userId", (req, res)=>{
 });
 
 // delete 
-router.delete("/:userId", (req, res)=>{
+router.delete("/:userId", middleware.isLoggedIn, (req, res)=>{
     User.findByIdAndDelete(req.params.userId, (err)=>{
         if(err) {
             console.log(err);

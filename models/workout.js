@@ -10,12 +10,10 @@ const workoutSchema = new mongoose.Schema ({
         username: String,
         name: String 
     },
-    execises: [
+    exercises: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Exercise",
-            reps: Number, 
-            sets: Number 
+            ref: "Exercise" 
         }
     ]
 });
