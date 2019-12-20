@@ -10,10 +10,6 @@ const WorkoutsHeading = props => {
                     <a href="/workout/new" className="btn btn-add-wo">Add a new workout</a>
                 </div>
             </div> 
-
-            <div className="row">
-                
-            </div>
         </div>
     )
 }

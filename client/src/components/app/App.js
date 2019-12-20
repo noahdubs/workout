@@ -6,7 +6,6 @@ import Landing from '../index/Landing'
 import Register from '../index/Register'
 import Login from '../index/Login'
 
-import Users from '../user/Users'
 import User from '../user/User'
 
 import Workout from '../workout/Workout'
@@ -31,7 +30,6 @@ const App = () => {
                 <Route path="/login" exact component={Login} />
 
                 {/* User routes */}
-                <Route path="/users" exact component={Users} />
                 <Route path="/users/:userId" exact component={User} />
 
                 {/* workout routes */}

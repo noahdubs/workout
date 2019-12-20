@@ -32,16 +32,18 @@ class Workout extends React.Component {
                     <div className="card-body wo-general">
                         <h1 className="card-title">{workout.name}</h1>
                         <p className="card-text">Description</p>
-                        <p className="card-text">Created By: {workout.author.name}</p>
+                        <a href={`/users/${workout.author.id}`}><p className="card-text" className="ex-author-link">Created By: {workout.author.name}</p></a>
                     </div>
-                    <h3>Exercises</h3>
-                    {exercises.map(exercise => (
-                        <div key={exercise._id} className="card-body ex-list">
-                            <h1 className="card-title">{exercise.name}</h1>
-                            <p className="card-text">Description</p>
-                            <a href={`/exercise/${exercise._id}`} className="btn ex-btn">See More</a>
-                        </div>
-                    ))}
+                    <h1>Exercises</h1>
+                    <div className="ex-list">
+                        {exercises.map(exercise => (
+                            <div key={exercise._id} className="card-body ex-one">
+                                <h1 className="card-title">{exercise.name}</h1>
+                                <p className="card-text">Description</p>
+                                <a href={`/exercise/${exercise._id}`} className="btn ex-btn">See More</a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )
         }

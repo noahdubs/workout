@@ -58,7 +58,7 @@ class Register extends React.Component {
                             <label for="password">Password</label>
                             <input type="password" name="password" value={this.state.password} placeholder="password" onChange={this.handleChange} className="form-control form-box" />
                         </div>
-                        <button className="btn form-button">Register</button>
+                        <button className="btn form-button">Register <i class="fas fa-user-plus icon"></i></button>
                     </form>
                 </div>
                 <div className="col-md-3"></div>

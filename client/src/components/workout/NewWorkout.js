@@ -29,22 +29,29 @@ class NewWorkout extends React.Component {
     }
 
     render() {
+        const exercises = this.state.exercises
         console.log(this.state)
         return (
-            <div className="top-div">
-                <h1>New workout page</h1>
-                <div>
-                    <p>Name of new workout:</p>
-                    <input type="text" name="name" />
-                    {this.state.exercises.map(item => {
-                        return (
-                            <div key={item._id}>
-                                  <input type="checkbox" name="exerciseId" value={item._id} />
-                                  <input type="number" name="sets" />
-                                  <input type="number" name="reps" />
-                            </div>
-                    )})} 
+            <div className="container new-ex-div">
+                <h1 className="add-ex-h">Create New Workout</h1>
+                <div className="row">
+                    <div className="col-md-6 new-ex-left">
+                        <h3 className="">Search For Exercises</h3>
+                        <label for="search">
+                            <input type="text" name="search" placeholder="search" />
+                        </label>
+                        {exercises.map(exercise => (
+                            <p key={exercise._id}>
+                                {exercise.name}
+                            </p>
+                        ))}
+                    </div>
+                    <div className="col-md-6 new-ex-right">
+                        <h3 className="new-wo-h">Added Exercises</h3>
+                    </div>
                 </div>
+                
+                
             </div>
         )
     }
