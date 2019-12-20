@@ -31,22 +31,30 @@ router.get("/:workoutId", (req, res)=>{
 
 // post workout
 router.post("/", middleware.isLoggedIn, (req, res)=>{
+   console.log(req.body); 
    const name = req.body.name
    const exercises = req.body.exerciseId
-   Workout.create({name:name}, (err, workout)=>{
-       if(err) {
+   User.findById(req.user._id, (err, user)=>{
+       if(err){
            console.log(err);
        } else {
-           exercises.forEach((exercise) => {
-               workout.exercises.push(exercise)
-           });
-           workout.author.id = req.user._id;
-           workout.author.username = req.user.username;
-           workout.author.name = req.user.name;
-           workout.save();
-           console.log(workout);
-           res.redirect("/workout/" + workout._id)
-       }
+            Workout.create({name:name}, (err, workout)=>{
+                if(err) {
+                    console.log(err);
+                } else {
+                    exercises.forEach((exercise) => {
+                        workout.exercises.push(exercise)
+                    });
+                    user.workouts.push(workout);
+                    user.save();
+                    workout.author.id = req.user._id;
+                    workout.author.username = req.user.username;
+                    workout.author.name = req.user.name;
+                    workout.save();
+                    res.redirect("/workout/" + workout._id)
+                }
+            })
+        }
    })
 })
 

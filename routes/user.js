@@ -6,11 +6,10 @@ const express = require("express"),
 const router = express.Router({mergeParams: true});
 
 router.get("/:userId", (req, res)=>{
-    User.findById(req.params.userId, (err, foundUser)=>{
+    User.findById(req.params.userId).populate("workouts").exec((err, foundUser)=>{
         if(err) {
             console.log(err);
         } else {
-            console.log(foundUser);
             res.json(foundUser);
         }
     });

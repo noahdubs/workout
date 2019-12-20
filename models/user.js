@@ -11,7 +11,8 @@ const userSchema = new mongoose.Schema ({
             ref: "Workout",
             name: String 
         }
-    ]
+    ],
+    
 });
 
 userSchema.plugin(passportLocalMongoose);
