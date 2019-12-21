@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const workoutSchema = new mongoose.Schema ({
     name: String,
+    description: String,
+    picture : {
+        id: String,
+        url: String 
+    },
     author: {
         id: {
             type: mongoose.Schema.Types.ObjectId,
@@ -14,8 +19,8 @@ const workoutSchema = new mongoose.Schema ({
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Exercise" ,
-            sets: Number,
-            reps: Number
+            sets: String,
+            reps: String 
         }
     ]
 });

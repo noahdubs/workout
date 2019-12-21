@@ -29,6 +29,7 @@ class User extends React.Component {
                     <div className="jumbotron user-jumbo">
                         <h1>{user.name}</h1>
                         <h3>{user.username}</h3>
+                        <img src={user.picture.url} />
                     </div>
                     <h3>Workouts made by {user.name}</h3>
                     <div className="row user-row">

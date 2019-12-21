@@ -1,7 +1,23 @@
 const express = require("express"),
       User = require("../models/user"),
       Workout = require("../models/workout"),
-      middleware = require("../middleware/index");
+      middleware = require("../middleware/index"),
+      multer = require('multer'),
+      cloudinary = require("cloudinary"),
+      cloudinaryStorage = require("multer-storage-cloudinary");
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET 
+});
+const storage = cloudinaryStorage({
+    cloudinary: cloudinary,
+    folder: "demo",
+    allowedFormats: ["jpg", "png", "jpeg"],
+    transformation: [{ width: 500, height: 500, crop: "limit" }]
+});
+const parser = multer({ storage: storage });
 
 const router = express.Router({mergeParams: true});
 
@@ -30,31 +46,43 @@ router.get("/:workoutId", (req, res)=>{
 
 
 // post workout
-router.post("/", middleware.isLoggedIn, (req, res)=>{
-   console.log(req.body); 
-   const name = req.body.name
-   const exercises = req.body.exerciseId
-   User.findById(req.user._id, (err, user)=>{
+router.post("/", parser.single("image"), middleware.isLoggedIn, (req, res)=>{
+   const exercises = req.body.exerciseId 
+   const sets = req.body.sets
+   const reps = req.body.reps
+   const result = []
+   for(let i=0;i<exercises.length;i++){
+        const obj = {}
+        obj.id = exercises[i]
+        obj.sets = sets[i]
+        obj.reps = reps[i] 
+        result.push(obj)
+   } 
+   const image = {};
+   image.url = req.file.url;
+   image.id = req.file.public_id;
+
+   const author = {
+       id: req.user._id,
+       username: req.user.username,
+       name: req.user.name
+   }
+   const newWorkout = {
+       name: req.body.name,
+       description: req.body.description,
+       picture: image,
+       author: author
+   }
+   Workout.create(newWorkout, (err, createdWorkout)=>{
        if(err){
            console.log(err);
        } else {
-            Workout.create({name:name}, (err, workout)=>{
-                if(err) {
-                    console.log(err);
-                } else {
-                    exercises.forEach((exercise) => {
-                        workout.exercises.push(exercise)
-                    });
-                    user.workouts.push(workout);
-                    user.save();
-                    workout.author.id = req.user._id;
-                    workout.author.username = req.user.username;
-                    workout.author.name = req.user.name;
-                    workout.save();
-                    res.redirect("/workout/" + workout._id)
-                }
-            })
-        }
+           result.forEach(exercise => {
+               createdWorkout.exercises.push(exercise.id)
+           })
+           console.log(createdWorkout)
+           res.json(createdWorkout);
+       }
    })
 })
 

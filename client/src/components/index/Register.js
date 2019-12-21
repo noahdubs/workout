@@ -44,7 +44,7 @@ class Register extends React.Component {
             <div className="row form-div">
                 <div className="col-md-3"></div>
                 <div className="col-md-6 form-content">
-                    <form action="/api/register" method="POST"> 
+                    <form action="/api/register" method="POST" encType="multipart/form-data"> 
                         <h2 className="form-name">Register</h2>
                         <div className="form-group">
                             <label for="name">Your Name</label>
@@ -56,7 +56,11 @@ class Register extends React.Component {
                         </div>
                         <div className="form-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" value={this.state.password} placeholder="password" onChange={this.handleChange} className="form-control form-box" />
+                            <input type="password" name="password" placeholder="password" className="form-control form-box" />
+                        </div>
+                        <div className="form-group">
+                            <label for="profile picture">Profile Picture</label><br />
+                            <input type="file" name="image" />
                         </div>
                         <button className="btn form-button">Register <i class="fas fa-user-plus icon"></i></button>
                     </form>

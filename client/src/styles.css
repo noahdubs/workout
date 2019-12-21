@@ -28,6 +28,34 @@
     margin: 1em;
     width: 15em;
 }
+.new-ex-card {
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 1px solid white;
+}
+.reps-sets {
+    width: 100%;
+}
+.new-ex-right {
+    position: relative;
+    height: 800px;
+}
+.new-ex-right span {
+    position: absolute;
+    bottom: 0;
+    padding: 3em 0 1em 0;
+}
+.btn-submit-wo {
+    background-color: #f64c72;
+}
+.invisible-ex {
+    opacity: 0;
+    cursor: default;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+}
 
 
 

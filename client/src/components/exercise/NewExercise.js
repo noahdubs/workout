@@ -14,12 +14,24 @@ class NewExercise extends React.Component {
         return (
             <div className="container exs-div">
                 <div className="row new-ex-row">
-                    <h1>Add a new exercise</h1> 
                     <div className="col-md-12 new-ex-form">
-                        <form action="/api/exercise" method="post">
-                            <label for="exercise name">
-                                <input type="text" name="name" onChange={this.handleChange}  placeholder="exercise name" /> 
-                            </label><br />
+                        <form action="/api/exercise" method="post" encType="multipart/form-data">
+                            <h2 className="form-name">Add a new exercise</h2>
+                            <div className="form-group">
+                                <label for="exercise name">
+                                    <input type="text" name="name" onChange={this.handleChange}  placeholder="exercise name" className="form-control form-box" /> 
+                                </label>
+                            </div>
+                            <div className="form-group">
+                                <label for="exercise description">
+                                    <input type="text" name="description" onChange={this.handleChange}  placeholder="exercise description" className="form-control form-box" /> 
+                                </label>
+                            </div>
+                            <div className="form-group">
+                                <label for="exercise picture">
+                                    <input type="file" name="image" /> 
+                                </label>
+                            </div>
                             <button className="btn new-ex-btn">Submit new exercise</button>
                         </form>
                     </div>

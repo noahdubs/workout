@@ -5,7 +5,9 @@ const express = require('express'),
       passport = require('passport'),
       User = require("./models/user"),
       cors = require("cors");
-      
+
+require('dotenv').config();
+
 const userRoute = require("./routes/user"),
       workoutRoute = require("./routes/workout"),
       exerciseRoute = require("./routes/exercise"),
@@ -38,4 +40,4 @@ app.use("/api/workout", workoutRoute);
 app.use("/api/exercise", exerciseRoute);
 
 
-app.listen(5000, ()=> {console.log("starting server");});
+app.listen(process.env.PORT, ()=> {console.log("starting on port " + process.env.PORT);});

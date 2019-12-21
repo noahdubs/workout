@@ -2,7 +2,23 @@ const express = require("express"),
       passport = require("passport"),
       User = require("../models/user"),
       Exercise = require("../models/exercise"),
-      middleWare = require("../middleware/index");
+      middleWare = require("../middleware/index"),
+      multer = require('multer'),
+      cloudinary = require("cloudinary"),
+      cloudinaryStorage = require("multer-storage-cloudinary");
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET 
+});
+const storage = cloudinaryStorage({
+    cloudinary: cloudinary,
+    folder: "demo",
+    allowedFormats: ["jpg", "png", "jpeg"],
+    transformation: [{ width: 500, height: 500, crop: "limit" }]
+});
+const parser = multer({ storage: storage });
 
 const router = express.Router({mergeParams: true});
 
@@ -30,9 +46,17 @@ router.get("/:exerciseId", (req, res)=>{
     });
 });
 
-router.post("/", middleWare.isLoggedIn, (req, res)=>{
-    console.log(req.body);
-    Exercise.create(req.body, (err, exercise)=>{
+router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
+    console.log(req.file);
+    const image = {};
+    image.url = req.file.url;
+    image.id = req.file.public_id;
+    const newExercise = {
+        name: req.body.name, 
+        description: req.body.description,
+        picture: image
+    }
+    Exercise.create(newExercise, (err, exercise)=>{
         if(err) {
             console.log(err);
         } else {
