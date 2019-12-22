@@ -47,7 +47,6 @@ router.get("/:exerciseId", (req, res)=>{
 });
 
 router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
-    console.log(req.file);
     const image = {};
     image.url = req.file.url;
     image.id = req.file.public_id;
