@@ -65,7 +65,7 @@ router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
             obj.sets = sets[i]
             obj.reps = reps[i] 
             result.push(obj)
-        }  
+        } 
     } else {
         const obj = {}
         obj.id = exercises

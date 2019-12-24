@@ -7,6 +7,27 @@ class Carousel extends React.Component {
     state = {
         currentImageIndex: 0
     }
+    
+    componentDidMount = () => {
+        const interval = setInterval(this.next, 5000);
+        this.setState({currentImageIndex:interval})
+    }
+    componentWillUnmount = () => {
+        clearInterval(this.state.currentImageIndex)
+    }
+    next = () => {
+        const index = this.state.currentImageIndex
+        if(index === 2){
+            this.setState({currentImageIndex:0})
+        } else {
+            this.setState(prev => {
+                return {
+                    currentImageIndex: prev.currentImageIndex + 1
+                }
+            })
+        }
+        
+    }
 
     previousSlide = () => {
         const lastIndex = imgUrls.length -1
@@ -27,6 +48,7 @@ class Carousel extends React.Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <div className="carousel landing-div">
                 <Arrow 

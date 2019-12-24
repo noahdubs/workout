@@ -1,6 +1,4 @@
 const express = require("express"),
-      passport = require("passport"),
-      User = require("../models/user"),
       Exercise = require("../models/exercise"),
       middleWare = require("../middleware/index"),
       multer = require('multer'),
@@ -47,13 +45,14 @@ router.get("/:exerciseId", (req, res)=>{
 });
 
 router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
-    // const image = {};
-    // image.url = req.file.url;
-    // image.id = req.file.public_id;
+    console.log(req.file)
+    const image = {};
+    image.url = req.file.url;
+    image.id = req.file.public_id;
     const newExercise = {
         name: req.body.name, 
         description: req.body.description,
-        // picture: image
+        picture: image
     }
     Exercise.create(newExercise, (err, exercise)=>{
         if(err) {
