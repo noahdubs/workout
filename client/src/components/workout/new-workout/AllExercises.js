@@ -27,3 +27,4 @@ const AllExercises = props => {
 }
 
 export default AllExercises
+

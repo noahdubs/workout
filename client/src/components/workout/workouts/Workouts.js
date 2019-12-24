@@ -38,33 +38,23 @@ class Workout extends React.Component {
     }
 
     render() {
-        const workouts = this.state.workouts
+        let workouts = this.state.workouts
         const foundWorkouts = this.state.foundWorkouts
-        if(foundWorkouts.length === 0){
-            return (
-                <div>
-                    <WorkoutsHeading />
-                    <WorkoutsContainer 
-                        value={this.state.search}
-                        onChange={this.handleChange}
-                        onClick={this.handleSearch}
-                        workouts={workouts}
-                    />
-                </div>
-            )
-        } else {
-            return (
-                <div>
-                    <WorkoutsHeading />
-                    <WorkoutsContainer 
-                        value={this.state.search}
-                        onChange={this.handleChange}
-                        onClick={this.handleSearch}
-                        workouts={foundWorkouts}
-                    />
-                </div>
-            )
+        if(foundWorkouts.length > 0){
+            workouts = foundWorkouts
         }
+        
+        return (
+            <div>
+                <WorkoutsHeading />
+                <WorkoutsContainer 
+                    value={this.state.search}
+                    onChange={this.handleChange}
+                    onClick={this.handleSearch}
+                    workouts={workouts}
+                />
+            </div>
+        )
         
     }
 }

@@ -55,76 +55,33 @@ class NewWorkout extends React.Component {
     }
 
     render() {
-        const exercises = this.state.exercises
         const addedExercises = this.state.addedExercises
         const foundExercises = this.state.foundExercises
 
-        if(foundExercises.length === 0) {
-            return (
-                <div className="container new-ex-div">
-                    <h1 className="add-ex-h">Create New Workout</h1>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <Search 
-                                value={this.state.search}
-                                handleSearch={this.handleSearch}
-                                handleChange={this.handleChange}
-                            />
-                            <AllExercises 
-                                exercises={exercises}
-                                onClick={this.handleClick}
-                            />
-                        </div>
-                            <AddedExercises addedExercises={addedExercises}/>
+        let exercises = this.state.exercises
+        if(foundExercises.length > 0) {
+            exercises = this.state.foundExercises
+        } 
+        return (
+            <div className="container new-ex-div">
+                <h1 className="add-ex-h">Create New Workout</h1>
+                <a href="/exercise/new" className="btn btn-primary">Add a new exercise</a>
+                <div className="row">
+                    <div className="col-md-6">
+                        <Search 
+                            value={this.state.search}
+                            handleSearch={this.handleSearch}
+                            handleChange={this.handleChange}
+                        />
+                        <AllExercises 
+                            exercises={exercises}
+                            onClick={this.handleClick}
+                        />
                     </div>
+                        <AddedExercises addedExercises={addedExercises}/>
                 </div>
-            )
-        } else {
-            return (
-                    <div className="container new-ex-div">
-                        <h1 className="add-ex-h">Create New Workout</h1>
-                        <div className="row">
-                            <div className="col-md-6 new-ex-left">
-        
-        
-        
-                                <h3 className="">Search For Exercises</h3>
-                                <div className="form-group">
-                                    <label for="search">
-                                        <input type="text" name="search" placeholder="search" value={this.state.search} onChange={this.handleChange} />
-                                    </label>
-                                    <button onClick={this.handleSearch}>Search</button>
-                                </div>
-                                
-        
-        
-        
-                                {foundExercises.map(exercise => (
-                                    <div className="row new-ex-card" key={exercise._id}>
-                                        <div className="col-md-7">
-                                            <h3 className="card-title"><a href={`/exercise/${exercise._id}`}>{exercise.name}</a></h3>
-                                        </div>
-                                        <div className="col-md-4">
-                                            {/* <img src={exercise.picture.url} className="card-img" /> */}
-                                        </div>
-                                        <div className="col-md-1">
-                                            <i className="far fa-plus-square" 
-                                               onClick={this.handleClick} 
-                                               value={exercise._id} 
-                                               title={exercise.name}
-                                            ></i>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            
-                        </div>
-                        <form>
-                            
-                        </form>
-                    </div>
-                )
-        }
+            </div>
+        )
         
     }
 }

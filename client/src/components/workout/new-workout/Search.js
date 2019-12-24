@@ -6,7 +6,7 @@ const Search = props => {
             <label for="search">
                 <input type="text" name="search" placeholder="search" value={props.value} onChange={props.handleChange} />
             </label>
-            <button handleSearch={props.handleSearch}>Search</button>
+            <button onClick={props.handleSearch}>Search</button>
         </div>
     )
 }

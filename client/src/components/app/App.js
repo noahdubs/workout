@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Header from '../partials/Header'
+import Navbar from '../partials/navbar/Navbar'
 
-import Landing from '../index/Landing'
-import Register from '../index/Register'
-import Login from '../index/Login'
+import Landing from '../landing/Landing'
+import Register from '../index/register/Register'
+import Login from '../index/login/Login'
 
 import User from '../user/User'
 
@@ -12,9 +12,9 @@ import Workout from '../workout/workout/Workout'
 import Workouts from '../workout/workouts/Workouts'
 import NewWorkout from '../workout/new-workout/NewWorkout'
 
-import Exercises from '../exercise/Exercises'
-import Exercise from '../exercise/Exercise'
-import NewExercise from '../exercise/NewExercise'
+import Exercises from '../exercise/exercises/Exercises'
+import Exercise from '../exercise/exercise/Exercise'
+import NewExercise from '../exercise/newexercise/NewExercise'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -23,7 +23,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 const App = () => {
     return (
         <Router>
-            <Header /> 
+            <Navbar /> 
             <Switch>
                 <Route path="/" exact component={Landing} />
                 <Route path="/register" exact component={Register} />
