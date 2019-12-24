@@ -3,7 +3,8 @@ const express = require("express"),
       User = require("../models/user"),
       multer = require('multer'),
       cloudinary = require("cloudinary"),
-      cloudinaryStorage = require("multer-storage-cloudinary");
+      cloudinaryStorage = require("multer-storage-cloudinary"),
+      cors = require('cors');
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -13,25 +14,26 @@ cloudinary.config({
 const storage = cloudinaryStorage({
     cloudinary: cloudinary,
     folder: "demo",
-    allowedFormats: ["jpg", "png", "jpeg"],
+    allowedFormats: ["jpg", "png"],
     transformation: [{ width: 500, height: 500, crop: "limit" }]
 });
 const parser = multer({ storage: storage });
 
 const router = express.Router({mergeParams: true});
+router.use(cors())
 
 
 // /api before this
 router.post("/register", parser.single("image"), (req, res)=>{
     console.log(req.file);
     console.log(req.body);
-    const image = {};
-    image.url = req.file.url;
-    image.id = req.file.public_id;
+    // const image = {};
+    // image.url = req.file.url;
+    // image.id = req.file.public_id;
     const newUser = new User({
         username: req.body.username,
         name: req.body.name,
-        picture: image 
+        //picture: image 
     });
     User.register(newUser, req.body.password, (err, user)=>{
         if(err) {

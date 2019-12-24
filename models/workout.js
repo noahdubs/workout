@@ -15,21 +15,19 @@ const workoutSchema = new mongoose.Schema ({
         username: String,
         name: String 
     },
-    exercises: [
-        {
-            id: {
+    exercises: [{
+            _id: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: "Exercise"
+                ref: "Exercise", 
             },
-            sets: String,
-            reps: String 
-        }
-    ],
+            reps: String,
+            sets: String 
+    }],
     id_list: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Exercise",
-        }
+            ref: "Exercise"
+        }    
     ]
 });
 

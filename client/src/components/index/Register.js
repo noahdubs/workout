@@ -44,7 +44,8 @@ class Register extends React.Component {
             <div className="row form-div">
                 <div className="col-md-3"></div>
                 <div className="col-md-6 form-content">
-                    <form action="/api/register" method="POST" encType="multipart/form-data"> 
+                    {/* encType="multipart/form-data"*/}
+                    <form action="/api/register" method="POST"> 
                         <h2 className="form-name">Register</h2>
                         <div className="form-group">
                             <label for="name">Your Name</label>

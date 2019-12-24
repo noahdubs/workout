@@ -15,7 +15,8 @@ class NewExercise extends React.Component {
             <div className="container exs-div">
                 <div className="row new-ex-row">
                     <div className="col-md-12 new-ex-form">
-                        <form action="/api/exercise" method="post" encType="multipart/form-data">
+                        {/* encType="multipart/form-data"*/}
+                        <form action="/api/exercise" method="post">
                             <h2 className="form-name">Add a new exercise</h2>
                             <div className="form-group">
                                 <label for="exercise name">

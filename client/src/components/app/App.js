@@ -8,9 +8,9 @@ import Login from '../index/Login'
 
 import User from '../user/User'
 
-import Workout from '../workout/Workout'
-import Workouts from '../workout/Workouts'
-import NewWorkout from '../workout/NewWorkout'
+import Workout from '../workout/workout/Workout'
+import Workouts from '../workout/workouts/Workouts'
+import NewWorkout from '../workout/new-workout/NewWorkout'
 
 import Exercises from '../exercise/Exercises'
 import Exercise from '../exercise/Exercise'

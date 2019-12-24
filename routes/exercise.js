@@ -47,13 +47,13 @@ router.get("/:exerciseId", (req, res)=>{
 });
 
 router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
-    const image = {};
-    image.url = req.file.url;
-    image.id = req.file.public_id;
+    // const image = {};
+    // image.url = req.file.url;
+    // image.id = req.file.public_id;
     const newExercise = {
         name: req.body.name, 
         description: req.body.description,
-        picture: image
+        // picture: image
     }
     Exercise.create(newExercise, (err, exercise)=>{
         if(err) {
@@ -66,6 +66,17 @@ router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
         }
     });
 });
+
+router.get("/find/:search", (req, res)=>{
+    const search = req.params.search
+    Exercise.find({name:search}, (err, exercises)=>{
+        if(err){
+            console.log(err);
+        } else {
+            res.json(exercises);
+        }
+    })
+})
 
 router.put("/:exerciseId", middleWare.isLoggedIn, (req, res)=>{
     Exercise.findByIdAndUpdate(req.params.exerciseId, req.body, (err, updatedExercise)=>{
