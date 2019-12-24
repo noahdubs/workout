@@ -7,14 +7,12 @@ const ExerciseList = ({ exercises }) => {
                 <div className="row ex-one" key={exercise._id._id}>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h1 className="card-title">{exercise._id.name}</h1>
-                            <p className="card-text">{exercise._id.description}</p>
-                            <a href={`/exercise/${exercise._id._id}`} className="btn ex-btn">See More</a>
+                            <a className="new-wo-ex-title" href={`/exercise/${exercise._id._id}`}><h3 className="card-title">{exercise._id.name}</h3></a>
                         </div>
                     </div>
-                    <div className="col-md-2">
-                        <h4>Sets: {exercise.sets}</h4>
-                        <h4>Reps: {exercise.reps}</h4>
+                    <div className="col-md-4 wo-reps-sets">
+                        <h5>{exercise.sets} sets</h5>
+                        <h5>{exercise.reps} reps</h5>
                     </div>
                 </div>
             ))}                        

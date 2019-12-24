@@ -3,12 +3,12 @@ import Form from './Form'
 
 const Container = props => {
     return (
-        <div className="container exs-div">
-            <div className="row new-ex-row">
-                <div className="col-md-12 new-ex-form">
-                    <Form handleChange={props.handleChange} />                   
-                </div>
+        <div className="row form-div">
+            <div className="col-md-3"></div>
+            <div className="col-md-6 form-content">
+                <Form handleChange={props.handleChange} />
             </div>
+            <div className="col-md-3"></div>
         </div>
     )
 }

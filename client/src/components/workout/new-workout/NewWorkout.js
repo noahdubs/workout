@@ -65,19 +65,14 @@ class NewWorkout extends React.Component {
         return (
             <div className="container new-ex-div">
                 <h1 className="add-ex-h">Create New Workout</h1>
-                <a href="/exercise/new" className="btn btn-primary">Add a new exercise</a>
-                <div className="row">
-                    <div className="col-md-6">
-                        <Search 
+                <div className="row new-wo-container">
+                        <AllExercises 
+                            exercises={exercises}
+                            onClick={this.handleClick}
                             value={this.state.search}
                             handleSearch={this.handleSearch}
                             handleChange={this.handleChange}
                         />
-                        <AllExercises 
-                            exercises={exercises}
-                            onClick={this.handleClick}
-                        />
-                    </div>
                         <AddedExercises addedExercises={addedExercises}/>
                 </div>
             </div>

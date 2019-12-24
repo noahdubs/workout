@@ -1,74 +1,19 @@
-/* bright accent colors
-===================
-#242582 blue
-#553d67 purple
-#f64c72 pink
-#99738e grayish
-#2f2fa2 lighter blue */
-
-
-/* new exercise page */
-.new-ex-row {
-    background-color: #553d67;
-    padding: 3em;
-    border: 3px solid #99738e;
-    border-radius: 10px;
-}
-/* All exericises page */
-.exs-div {
-    margin-top: 5em;
-}
-.ex-row {
-    background-color: #99738e;
-    border: 3px solid #f64c72;
-    border-radius: 10px;
-}
-.new-ex-btn {
-    background-color: #f64c72;
-    margin: 1em;
-    width: 15em;
-}
-.new-ex-card {
-    margin-bottom: 1em;
-    padding: .5em;
-    border: 1px solid white;
-}
-.reps-sets {
-    width: 100%;
-}
-.new-ex-right {
-    position: relative;
-    height: 800px;
-}
-.new-ex-right span {
-    position: absolute;
-    bottom: 0;
-    padding: 3em 0 1em 0;
-}
-.btn-submit-wo {
-    background-color: #f64c72;
-}
-.invisible-ex {
-    opacity: 0;
-    cursor: default;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    width: 0;
-}
-
-
-
-
-
-/* body styles */
+/* colors
+========================
+mindnight blue: #0C2340
+lake blue: #236192
+moonlight grey: #9EA2A2
+aurora green: #78BE20
+========================
+body styles */
 body {
-    background-color: #242582;
+    background-color: #0C2340;
     color: white;
 }
 /* navbar styles */
 .nav-custom {
-    background-color: #f64c72;
+    background-color: #236192;
+    border-bottom: 3px solid #9EA2A2;
 }
 .brand-name {
     padding-left: 15%;
@@ -81,6 +26,242 @@ body {
     width: 7em;
     text-align: center;
 } 
+/* Workouts page styles */
+.workouts-div {
+    margin-top: 5em;
+    color: white;
+}
+.jumbotron {
+    background-color: #236192;
+    border: 3px solid  #78BE20;
+    height: 20em;
+}
+.jumbo-content {
+    padding: 3em;
+}
+.wo-heading {
+    font-size: 63px;
+}
+.wo-p {
+    font-size: 21px;
+}
+.btn-add-wo {
+    background-color: #0C2340;
+    color: white !important;
+    width: 15em;
+    font-weight: 500;
+}
+.wos-container {
+    padding: 1.5em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+    background-color: #236192;
+}
+.wo-card {
+    background-color: #9EA2A2;
+    padding: .5em;
+    margin: 15px 0;  
+    border: 3px solid #0C2340;
+    border-radius: 10px;  
+    color: #0C2340;
+}
+.wo-sm-btn {
+    background-color: #236192;
+    width: 7em;
+    color: white;
+}
+.wo-search {
+    display: flex;
+    justify-content: space-between;
+}
+.wo-search-bar {
+    margin-right: 1em;
+    height: 2.5em;
+}
+.wo-search-btn {
+    background-color: #0C2340;
+    color: white;
+    width: 7em;
+    height: 2.5em;
+}
+/* New workout page */
+.new-ex-div {
+    margin-top: 5em;
+    background-color: #236192;
+    padding: 3em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.add-ex-h {
+    padding-bottom: .25em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid #78BE20;
+}
+.new-ex-left {
+    border-right: 3px solid #0C2340;
+}
+.new-wo-h {
+    text-align: center;
+    padding-top: 1em;
+}
+.new-wo-ex-btn {
+    background-color: #0C2340;
+    color: white;
+    margin-left: 1em;
+}
+.new-wo-search-btn {
+    background-color: #78BE20;
+    color: white;
+}
+.new-wo-container {
+    border: 3px solid #0C2340;
+    border-radius: 10px;
+    height: 800px;
+    overflow-y: scroll;
+}
+.new-wo-searchBar {
+    height: 35px;
+}
+.new-wo-search-div {
+    padding: .5em 0;
+}
+.new-wo-search-h {
+    padding-top: 1em;
+}
+.new-ex-card {
+    border-bottom: 2px solid #78BE20;
+    margin: .5em;
+    padding: .5em;
+}
+.new-wo-ex-title {
+    color: white !important;
+}
+.add-ex {
+    font-size: 30px;
+}
+.invisible-ex {
+    opacity: 0;
+    cursor: default;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+}
+.reps-sets {
+    width: 40%;
+    border: 2px solid #0C2340;
+    margin-right: .25em;
+}
+.reps-label {
+    font-size: 20px;
+    padding-right: .25em;
+}
+.btn-submit-wo {
+    background-color: #0C2340;
+    color: white;
+}
+.submit-wo-div {
+    padding-top: 1em;
+}
+.file-input {
+    background-color: #236192;
+    border: none;
+    color: white;
+}
+.info-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* login and register pages */
+.form-div {
+    margin-top: 12%;
+}
+.form-content {
+    padding: 4em;
+    border: 2px solid #78BE20;
+    background-color: #236192;
+    color: white;
+    border-radius: 10px;
+}
+.form-button {
+    background-color: #0C2340;
+    width: 10em;
+    color: white;
+}
+.form-box {
+    border: 2px solid #78BE20;
+}
+.form-name{
+    border-bottom: 1px solid #78BE20;
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+}
+/* individual workout page */
+.wo-div {
+    margin-top: 5em;
+}
+.wo-general {
+    background-color: #236192;
+    border: 3px solid #78BE20;
+    padding: 2em 0 2em 5em;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 3em;
+}
+.ex-list {
+    background-color: #236192;
+    padding: 1em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.ex-one {
+    margin: 1em 2em;
+    padding: 1em 0;
+    border-bottom: 3px solid #78BE20;
+}
+.wo-reps-sets {
+    background-color: #9EA2A2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #0C2340;
+    border-radius: 20px;
+}
+/* User profile page styles */
+.user-div {
+    margin-top: 5em;
+}
+.user-jumbo {
+    padding: 6em;
+    border-radius: 10px;
+}
+.user-row {
+    background-color: #236192;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+/* new exercise page */
+.new-ex-row {
+    background-color: #236192;
+    padding: 3em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+/* All exericises page */
+.exs-div {
+    margin-top: 5em;
+}
+.ex-row {
+    background-color: #236192;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.new-ex-btn {
+    background-color: #0C2340;
+    margin: 1em;
+    width: 15em;
+    color: white;
+}
 /* landing page styles */
 .landing-div {
     margin-top: 3%;
@@ -104,7 +285,7 @@ html, body, #root, .carousel, .image-center {
     text-align: center;
 }
 .slide-arrow {
-    color: #f64c72;
+    color: #0C2340;
     cursor: pointer;
     font-size: 3rem;
     position: fixed;
@@ -121,122 +302,26 @@ html, body, #root, .carousel, .image-center {
     padding-bottom: 3%;
 }
 .landing-btn {
-    background-color: #242582;
+    background-color: #0C2340;
     width: 35%;
     color: white;
     font-size: large;
 }
-/* login and register pages */
-.form-div {
-    margin-top: 12%;
-}
-.form-content {
-    padding: 4em;
-    border: 2px solid #99738e;
-    background-color: #553d67;
-    color: white;
-}
-.form-button {
-    background-color: #2f2fa2;
-    width: 10em;
-    color: white;
-}
-.form-box {
-    border: 2px solid #f64c72;
-}
-.form-name{
-    border-bottom: 1px solid #f64c72;
-    padding-bottom: .5em;
-    margin-bottom: 1em;
-}
-
 /* loading page */
 .loader {
     margin: 15em 0em 0em 40em !important;
     height: 200px;
     width: 200px;
     margin: auto;
-    color: #f64c72;
-}
-/* Workouts page styles */
-.workouts-div {
-    margin-top: 5em;
-    color: white;
-}
-.jumbotron {
-    background-color: #553d67;
-    border: 3px solid #99738e;
-}
-.jumbo-content {
-    padding: 3em;
-}
-.wo-heading {
-    font-size: 63px;
-}
-.wo-p {
-    font-size: 21px;
-}
-.btn-add-wo {
-    background-color: #f64c72;
-    color: white !important;
-    width: 15em;
-    font-weight: 500;
-}
-.wos-container {
-    border: 3px solid #f64c72;
-    border-radius: 10px;
-    background-color: #99738e;
-}
-.wo-card {
-    background-color: #2f2fa2;
-    padding: .5em;
-    margin: 15px 0;  
-    border: 3px solid #553d67;
-    border-radius: 10px;  
-    color: white;
-}
-.wo-sm-btn {
-    background-color: #f64c72;
-    width: 7em;
-    color: white;
-}
-/* individual workout page */
-.wo-div {
-    margin-top: 5em;
-}
-.wo-general {
-    background-color: #553d67;
-    border: 3px solid #99738e;
-    padding: 2em 0 2em 5em;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 3em;
-}
-.ex-list {
-    background-color: #99738e;
-    padding: 1em;
-    border: 3px solid #f64c72;
-    border-radius: 10px;
-}
-.ex-one {
-    background-color: #2f2fa2;
-    margin-top: 1em;
-    border: 3px solid #553d67;
-    border-radius: 10px;
-    padding: 2em 0 2em 5em;
-}
-.ex-btn {
-    background-color: #f64c72;
-    width: 7em;
-    color: white;
+    color: #78BE20;
 }
 /* individual exercise page */
 .ex-div {
     margin-top: 5em;
 }
 .ex-content {
-    background-color: #553d67;
-    border: 3px solid #99738e;
+    background-color: #236192;
+    border: 3px solid #78BE20;
     border-radius: 10px;
     padding: 5em;
     color: white;
@@ -253,47 +338,6 @@ html, body, #root, .carousel, .image-center {
     text-decoration: none !important; 
 
 }
-/* User profile page styles */
-.user-div {
-    margin-top: 5em;
-}
-.user-jumbo {
-    padding: 6em;
-    border-radius: 10px;
-}
-.user-row {
-    background-color: #99738e;
-    border: 3px solid #f64c72;
-    border-radius: 10px;
-}
-/* New workout page */
-.new-ex-div {
-    margin-top: 5em;
-    background-color: #553d67;
-    padding: 3em;
-    border: 3px solid #99738e;
-    border-radius: 10px;
-}
-.add-ex-h {
-    padding-bottom: .25em;
-    margin-bottom: 1em;
-    border-bottom: 3px solid #99738e;
-}
-
-.new-ex-left {
-    border: 3px solid #f64c72;
-    background-color: #99738e;
-    padding: 2em;
-}
-.new-ex-right {
-    background-color: #2f2fa2;
-    border: 3px solid #f64c72;
-    padding: 2em;
-}
-.new-wo-h {
-    text-align: center;
-}
-
 
 
 
