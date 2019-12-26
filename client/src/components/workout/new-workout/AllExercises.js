@@ -12,13 +12,13 @@ const AllExercises = props => {
             />
             {props.exercises.map(exercise => (
                 <div className="row new-ex-card" key={exercise._id}>
-                    <div className="col-md-7">
+                    <div className="col-md-6 add-ex-name">
                         <h3 className="card-title"><a className="new-wo-ex-title" href={`/exercise/${exercise._id}`}>{exercise.name}</a></h3>
                     </div>
                     <div className="col-md-4">
-                        {/* <img src={exercise.picture.url} className="card-img" /> */}
+                        <img src={exercise.picture.url} className="card-img" />
                     </div>
-                    <div className="col-md-1">
+                    <div className="col-md-2 add-btn-col">
                         <i className="far fa-plus-square add-ex" 
                             onClick={props.onClick} 
                             value={exercise._id} 

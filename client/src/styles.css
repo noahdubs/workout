@@ -10,6 +10,19 @@ body {
     background-color: #0C2340;
     color: white;
 }
+/* all button style */
+.workout-btn:hover {
+    color: #78BE20;
+}
+.workout-btn:focus {
+    color: #78BE20;
+}
+.workout-btn-inverse:hover{
+    color: #0C2340;
+}
+.workout-btn-inverse:focus{
+    color: #0C2340;
+}
 /* navbar styles */
 .nav-custom {
     background-color: #236192;
@@ -47,7 +60,7 @@ body {
 }
 .btn-add-wo {
     background-color: #0C2340;
-    color: white !important;
+    color: white;
     width: 15em;
     font-weight: 500;
 }
@@ -85,6 +98,19 @@ body {
     height: 2.5em;
 }
 /* New workout page */
+.card-img {
+    border-radius: 10px;
+    border: 2px solid #9EA2A2;
+}
+.add-btn-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-ex-name {
+    display: flex;
+    align-items: center;
+}
 .new-ex-div {
     margin-top: 5em;
     background-color: #236192;
@@ -102,7 +128,9 @@ body {
 }
 .new-wo-h {
     text-align: center;
-    padding-top: 1em;
+    padding: 1em 0 .25em 0;
+    margin: 0 4em .5em 4em;
+    border-bottom: 3px solid #0C2340;
 }
 .new-wo-ex-btn {
     background-color: #0C2340;
@@ -121,6 +149,9 @@ body {
 }
 .new-wo-searchBar {
     height: 35px;
+    width: 175px;
+    border: 2px solid #0C2340;
+    margin-right: 10px;
 }
 .new-wo-search-div {
     padding: .5em 0;
@@ -136,8 +167,12 @@ body {
 .new-wo-ex-title {
     color: white !important;
 }
+.new-wo-ex-title:hover{
+    color: #0C2340 !important;
+    text-decoration: none;
+}
 .add-ex {
-    font-size: 30px;
+    font-size: 40px;
 }
 .invisible-ex {
     opacity: 0;
@@ -197,6 +232,15 @@ body {
     margin-bottom: 1em;
 }
 /* individual workout page */
+.wo-ex-picture {
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #0C2340;
+}
+.img-div {
+    display: flex;
+    justify-content: center;
+}
 .wo-div {
     margin-top: 5em;
 }
@@ -228,11 +272,14 @@ body {
     border-radius: 20px;
 }
 /* User profile page styles */
+.profile-pic {
+    border-radius: 50px;
+    border: 3px solid #78BE20;
+}
 .user-div {
     margin-top: 5em;
 }
 .user-jumbo {
-    padding: 6em;
     border-radius: 10px;
 }
 .user-row {
@@ -316,6 +363,11 @@ html, body, #root, .carousel, .image-center {
     color: #78BE20;
 }
 /* individual exercise page */
+.ex-picture {
+    width: 70%;
+    border-radius: 10px;
+    border: 3px solid #9EA2A2;
+}
 .ex-div {
     margin-top: 5em;
 }
@@ -323,20 +375,36 @@ html, body, #root, .carousel, .image-center {
     background-color: #236192;
     border: 3px solid #78BE20;
     border-radius: 10px;
-    padding: 5em;
+    padding: 3em;
     color: white;
 }
 .ex-author-link {
     color: white;
 }
 .ex-author-link:hover {
-    color: white;
+    color: #0C2340;
     text-decoration: none !important;
 }
 .ex-author-link:focus {
-    color: white;
+    color: #0C2340;
     text-decoration: none !important; 
-
+}
+.footer-div {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #9EA2A2;
+    padding: 1em 0;
+}
+.footer-h {
+    color: #78BE20;
+    font-weight: 700;
+}
+.footer-icon {
+    font-size: 30px;
+    padding: 0 .5em;
+    color: #78BE20;
 }
 
 

@@ -13,8 +13,8 @@ cloudinary.config({
 });
 const storage = cloudinaryStorage({
     cloudinary: cloudinary,
-    folder: "demo",
-    allowedFormats: ["jpg", "png"],
+    folder: "profile-pics",
+    allowedFormats: ["jpg", "png", "jpeg"],
     transformation: [{ width: 500, height: 500, crop: "limit" }]
 });
 const parser = multer({ storage: storage });
@@ -25,15 +25,17 @@ router.use(cors())
 
 // /api before this
 router.post("/register", parser.single("image"), (req, res)=>{
-    console.log(req.file);
-    console.log(req.body);
-    // const image = {};
-    // image.url = req.file.url;
-    // image.id = req.file.public_id;
+    const image = {};
+    if(typeof req.file === "undefined"){
+        image.url = process.env.DEFAULT_PIC
+    } else {
+        image.url = req.file.url;
+        image.id = req.file.public_id;
+    }
     const newUser = new User({
         username: req.body.username,
         name: req.body.name,
-        //picture: image 
+        picture: image 
     });
     User.register(newUser, req.body.password, (err, user)=>{
         if(err) {

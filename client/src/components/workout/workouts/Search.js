@@ -6,7 +6,7 @@ const Search = props => {
             <h1 className="all-wo-h">All Workouts</h1>
             <div>
                 <input type="text" name="search" value={props.value} onChange={props.onChange} className="wo-search-bar" />
-                <button className="btn wo-search-btn" onClick={props.onClick}>Search</button>
+                <button type="submit" className="btn wo-search-btn workout-btn" onClick={props.onClick}>Search</button>
             </div>
         </div>
     )

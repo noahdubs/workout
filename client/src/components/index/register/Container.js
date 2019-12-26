@@ -6,7 +6,6 @@ const Container = props => {
         <div className="row form-div">
             <div className="col-md-3"></div>
             <div className="col-md-6 form-content">
-                {/* encType="multipart/form-data"*/}
                 <Form 
                     handleChange={props.handleChange}
                     name={props.name}

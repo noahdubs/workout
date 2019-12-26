@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = props => {
     return (
-        <form action="/api/register" method="POST"> 
+        <form action="/api/register" method="POST" encType="multipart/form-data"> 
             <h2 className="form-name">Register</h2>
             <div className="form-group">
                 <label for="name">Your Name</label>
@@ -20,7 +20,7 @@ const Form = props => {
                 <label for="profile picture">Profile Picture</label><br />
                 <input type="file" name="image" />
             </div>
-            <button className="btn form-button">Register <i class="fas fa-user-plus icon"></i></button>
+            <button className="btn form-button workout-btn">Register <i class="fas fa-user-plus icon"></i></button>
         </form>
     )
 }

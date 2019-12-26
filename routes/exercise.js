@@ -12,7 +12,7 @@ cloudinary.config({
 });
 const storage = cloudinaryStorage({
     cloudinary: cloudinary,
-    folder: "demo",
+    folder: "exercise",
     allowedFormats: ["jpg", "png", "jpeg"],
     transformation: [{ width: 500, height: 500, crop: "limit" }]
 });
@@ -45,10 +45,11 @@ router.get("/:exerciseId", (req, res)=>{
 });
 
 router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
-    console.log(req.file)
     const image = {};
-    image.url = req.file.url;
-    image.id = req.file.public_id;
+    if(req.file.url){
+        image.url = req.file.url;
+        image.id = req.file.public_id;
+    }
     const newExercise = {
         name: req.body.name, 
         description: req.body.description,

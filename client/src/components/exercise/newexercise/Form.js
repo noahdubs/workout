@@ -16,7 +16,7 @@ const Form = props => {
                 <label for="exercise picture">Exercise picture</label>
                     <input type="file" name="image" className="form-control file-input" /> 
             </div>
-            <button className="btn new-ex-btn">Submit new exercise</button>
+            <button className="btn new-ex-btn workout-btn">Submit new exercise</button>
         </form>
     )
 }

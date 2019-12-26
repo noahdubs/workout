@@ -15,8 +15,8 @@ cloudinary.config({
 });
 const storage = cloudinaryStorage({
     cloudinary: cloudinary,
-    folder: "demo",
-    allowedFormats: ["jpg", "png", "jpeg", "json"],
+    folder: "workout",
+    allowedFormats: ["jpg", "png", "jpeg"],
     transformation: [{ width: 500, height: 500, crop: "limit" }]
 });
 const parser = multer({ storage: storage });
@@ -34,12 +34,8 @@ router.get("/", (req, res)=>{
     });
 });
 
-
 // get one workout
 router.get("/:workoutId", (req, res)=>{
-    // Workout.findById(req.params.workoutId, (err, workout)=> {
-    //     console.log(workout)
-    // })
     Workout.findById(req.params.workoutId).populate("exercises._id").exec((err, workout)=>{
         if(err){
             console.log(err)
@@ -48,9 +44,6 @@ router.get("/:workoutId", (req, res)=>{
         }
     })
 });
-
-
-
 
 // post workout
 router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
@@ -73,9 +66,11 @@ router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
         obj.reps = reps 
         result.push(obj)
     }
-    // const image = {};
-    // image.url = req.file.url;
-    // image.id = req.file.public_id;
+    const image = {};
+    if(req.file.url){
+        image.url = req.file.url;
+        image.id = req.file.public_id;
+    }
 
     const author = {
         id: req.user._id,
@@ -85,7 +80,7 @@ router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
     const newWorkout = {
         name: req.body.name,
         description: req.body.description,
-        // picture: image,
+        picture: image,
         author: author
     }
     Workout.create(newWorkout, (err, createdWorkout)=>{

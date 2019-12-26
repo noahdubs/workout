@@ -15,7 +15,7 @@ const SubmitWorkout = () => {
                 <label for="picture">Picture</label>
                 <input type="file" name="image" className="form-control file-input"/>
             </div>
-            <button type="submit" className="btn btn-submit-wo">Submit Workout</button>
+            <button type="submit" className="btn btn-submit-wo workout-btn">Submit Workout</button>
         </div>
     )
 }

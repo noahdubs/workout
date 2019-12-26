@@ -4,7 +4,9 @@ const express = require('express'),
       LocalStrategy = require("passport-local"),
       passport = require('passport'),
       User = require("./models/user"),
-      cors = require("cors");
+      cors = require("cors"),
+      methodOverride = require("method-override"),
+      flash = require("connect-flash");
 
 require('dotenv').config();
 
@@ -17,6 +19,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(methodOverride("_method"));
+app.use(flash());
 
 mongoose.connect("mongodb://localhost:27017/workout", {useNewUrlParser:true, useUnifiedTopology:true});
 
@@ -25,6 +29,11 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false 
 }));
+app.use((req,res,next)=>{
+    res.locals.error = req.flash("error")
+    res.locals.success = req.flash("success")
+    next()
+})
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));

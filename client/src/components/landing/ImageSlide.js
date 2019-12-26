@@ -16,7 +16,7 @@ const ImageSlide = ({ url }) => {
                 <div className="col-md-3"></div>
                 <div className="col-md-6 content">
                     <h1 className="landing-heading">Welcome To Workout App</h1>
-                    <a href="/workout" className="btn landing-btn">View All Workouts</a>
+                    <a href="/workout" className="btn landing-btn workout-btn">View All Workouts</a>
                 </div>
                 <div className="col-md-3"></div>
             </div>

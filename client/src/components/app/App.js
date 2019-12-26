@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Navbar from '../partials/navbar/Navbar'
+import Footer from '../partials/footer/Footer'
 
 import Landing from '../landing/Landing'
 import Register from '../index/register/Register'
 import Login from '../index/login/Login'
 
-import User from '../user/User'
+import User from '../user/user/User'
+import UserEdit from '../user/userEdit/UserEdit'
 
 import Workout from '../workout/workout/Workout'
 import Workouts from '../workout/workouts/Workouts'
@@ -31,6 +33,7 @@ const App = () => {
 
                 {/* User routes */}
                 <Route path="/users/:userId" exact component={User} />
+                <Route path="/users/:userId/edit" exact component={UserEdit} />
 
                 {/* workout routes */}
                 <Route path="/workout" exact component={Workouts} />
@@ -42,6 +45,7 @@ const App = () => {
                 <Route path="/exercise/new" exact component={NewExercise} />
                 <Route path="/exercise/:exerciseId" exact component={Exercise} />
             </Switch>
+            <Footer />
         </Router>
     )
 }

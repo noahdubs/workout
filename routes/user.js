@@ -6,9 +6,6 @@ const express = require("express"),
 const router = express.Router({mergeParams: true});
 
 router.get("/:userId", (req, res)=>{
-    // User.findById(req.params.userId, (err, user)=>{
-    //     console.log(user);
-    // })
     User.findById(req.params.userId).populate("workouts").exec((err, foundUser)=>{
         if(err) {
             console.log(err);
@@ -30,18 +27,18 @@ router.get("/", (req, res)=>{
 });
 
 // update
-router.put("/:userId", middleware.isLoggedIn, (req, res)=>{
+router.put("/:userId", middleware.checkUser, (req, res)=>{
     User.findByIdAndUpdate(req.params.userId, req.body, (err, updatedUser)=>{
         if(err) {
             console.log(err);
         } else {
-            res.json(updatedUser);
+            res.redirect(`/users/${updatedUser._id}`)
         }
     });
 });
 
 // delete 
-router.delete("/:userId", middleware.isLoggedIn, (req, res)=>{
+router.delete("/:userId", middleware.checkUser, (req, res)=>{
     User.findByIdAndDelete(req.params.userId, (err)=>{
         if(err) {
             console.log(err);
