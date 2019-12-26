@@ -13,6 +13,7 @@ import UserEdit from '../user/userEdit/UserEdit'
 import Workout from '../workout/workout/Workout'
 import Workouts from '../workout/workouts/Workouts'
 import NewWorkout from '../workout/new-workout/NewWorkout'
+import EditWorkout from '../workout/edit/EditWorkout'
 
 import Exercises from '../exercise/exercises/Exercises'
 import Exercise from '../exercise/exercise/Exercise'
@@ -39,6 +40,7 @@ const App = () => {
                 <Route path="/workout" exact component={Workouts} />
                 <Route path="/workout/new" exact component={NewWorkout} />
                 <Route path="/workout/:workoutId" exact component={Workout} />
+                <Route path="/workout/:workoutId/edit" exact component={EditWorkout} />
 
                 {/* Exercise routes */}
                 <Route path="/exercise" exact component={Exercises} />

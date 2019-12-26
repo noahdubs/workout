@@ -12,7 +12,7 @@ const Jumbotron = ({ user }) => {
                     <h1>{user.name}</h1>
                     <h3>{user.username}</h3>
                 </div>
-               <LoggedIn />
+               <LoggedIn profileOwner={user._id}/>
             </div>
         </div>
     )

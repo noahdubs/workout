@@ -1,5 +1,6 @@
 import React from 'react'
 import Loading from './Loading'
+
 class LoggedIn extends React.Component {
     state = {}
 
@@ -13,28 +14,28 @@ class LoggedIn extends React.Component {
 
     render() {
         const user = this.state.user
-        const profileOwner = this.props.profileOwner
+        const workout = this.props.workout
+        console.log(this.state)
         if(!user){
             return (
                 <div></div>
-        )
-        }else if(user._id === profileOwner){
+            )
+        } else if(user._id === workout.author.id) {
             return (
-                <div className="col-md-4">
-                    <a href="/workout/new" className="btn btn-primary">Add a new workout</a>
-                    <a href={`/users/${user._id}/edit`} className="btn btn-warning">Edit profile</a>
-                    <form action={`/api/users/${user._id}?_method=DELETE`} method="POST">
-                        <button className="btn btn-danger">Delete profile</button>
+                <div className="col-md-2">
+                    <a href={`/workout/${workout._id}/edit`} className="btn btn-warning">Edit workout</a>
+                    <form action={`/api/workout/${workout._id}?_method="DELETE"`} method="POST">
+                        <button className="btn btn-danger">Delete workout</button>
                     </form>
                 </div>
             )
+            
         } else {
             return (
-                <div>
-
-                </div>
+                <div className="col-md-2"></div>
             )
         }
+        
     }
 }
 

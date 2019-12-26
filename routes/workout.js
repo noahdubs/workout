@@ -105,13 +105,30 @@ router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
 
 // update workout
 router.put("/:workoutId", (req, res)=>{
-    Workout.findByIdAndUpdate(req.params.workoutId, req.body, (err, workout)=>{
-        if(err) {
-            console.log(err);
+    deletedOnes = req.body.exerciseId
+    deletedExercises = []
+    if(typeof deletedOnes === 'object'){
+        deletedOnes.forEach(item => {
+            deletedExercises.push(item)
+        })
+    } else {
+        deletedExercises.push(deletedOnes)
+    }
+    console.log(deletedExercises)
+    Workout.findById(req.params.workoutId, (err, workout)=>{
+        if(err){
+            console.log(err)
         } else {
-            res.json(workout);
+            console.log(workout.id)
+            const idList = []
+            workout.exercises.forEach(item => {idList.push(item.id)})
+            deletedExercises.forEach(item => {
+                Workout.update( { _id: workout._id }, { "$pull": { "exercises": { "_id": item } } }, {safe: true, multi:true} )
+            })
+            workout.save();
+            console.log(workout)
         }
-    });
+    })
 });
 
 // delete workout
