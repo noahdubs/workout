@@ -6,7 +6,8 @@ const express = require('express'),
       User = require("./models/user"),
       cors = require("cors"),
       methodOverride = require("method-override"),
-      flash = require("connect-flash");
+      flash = require("connect-flash"),
+      path = require("path")
 
 require('dotenv').config();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 app.use(flash());
+app.use(express.static("client/build"));
 
 mongoose.connect("mongodb://localhost:27017/workout", {useNewUrlParser:true, useUnifiedTopology:true});
 
@@ -50,5 +52,8 @@ app.use("/api/users", userRoute);
 app.use("/api/workout", workoutRoute);
 app.use("/api/exercise", exerciseRoute);
 
+app.get("*", (req, res)=> {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+})
 
 app.listen(process.env.PORT, ()=> {console.log("starting on port " + process.env.PORT);});
