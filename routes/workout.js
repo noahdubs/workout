@@ -1,5 +1,6 @@
 const express = require("express"),
       User = require("../models/user"),
+      mongoose = require("mongoose"),
       Workout = require("../models/workout"),
       Exercise = require("../models/exercise"),
       middleware = require("../middleware/index"),
@@ -22,6 +23,7 @@ const storage = cloudinaryStorage({
 const parser = multer({ storage: storage });
 
 const router = express.Router({mergeParams: true});
+const ObjectId = require('mongodb').ObjectID;
 
 // get all workouts
 router.get("/", (req, res)=>{
@@ -104,35 +106,52 @@ router.post("/", middleware.isLoggedIn, parser.single("image"), (req, res)=>{
 })
 
 // update workout
-router.put("/:workoutId", (req, res)=>{
-    deletedOnes = req.body.exerciseId
-    deletedExercises = []
-    if(typeof deletedOnes === 'object'){
-        deletedOnes.forEach(item => {
-            deletedExercises.push(item)
+router.put("/:workoutId", parser.single("image"), middleware.checkWorkoutOwner, (req, res)=>{
+    image = {}
+    if(req.file){
+        image.url = req.file.url
+        image.id = req.file.public_id
+        Workout.findByIdAndUpdate(req.params.workoutId, 
+            {$set: {
+                picture: {
+                    url: image.url,
+                    id: image.id 
+                }
+            }
         })
-    } else {
-        deletedExercises.push(deletedOnes)
-    }
-    console.log(deletedExercises)
-    Workout.findById(req.params.workoutId, (err, workout)=>{
-        if(err){
-            console.log(err)
-        } else {
-            console.log(workout.id)
-            const idList = []
-            workout.exercises.forEach(item => {idList.push(item.id)})
-            deletedExercises.forEach(item => {
-                Workout.update( { _id: workout._id }, { "$pull": { "exercises": { "_id": item } } }, {safe: true, multi:true} )
+            .catch(err => {
+                console.log(err);
+                res.status(500).send("Error")
             })
-            workout.save();
-            console.log(workout)
-        }
-    })
+    } 
+    if(req.body.exerciseId){
+        Workout.findByIdAndUpdate(req.params.workoutId, {
+            $pull: {
+                exercises: {
+                    _id: {$in: req.body.exerciseId}
+                }
+            },
+        },
+        {new: true},
+        )
+            .catch(err => {
+                console.log(err);
+                res.status(500).send("Error");
+            });  
+    }
+    Workout.findByIdAndUpdate(req.params.workoutId, req.body)
+        .then(newWorkout => {
+            res.redirect(`/workout/${newWorkout._id}`);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send("Error")
+        })
+    
 });
 
 // delete workout
-router.delete("/:workoutId", (req, res)=>{
+router.delete("/:workoutId", middleware.checkWorkoutOwner, (req, res)=>{
     Workout.findByIdAndDelete(req.params.workoutId, (err)=>{
         if(err) {
             console.log(err);
@@ -144,3 +163,26 @@ router.delete("/:workoutId", (req, res)=>{
 
 
 module.exports = router;
+
+// deletedOnes = req.body.exerciseId
+//     deletedExercises = []
+//     if(typeof deletedOnes === 'object'){
+//         deletedOnes.forEach(item => {
+//             deletedExercises.push(item)
+//         })
+//     } else {
+//         deletedExercises.push(deletedOnes)
+//     }
+//     Workout.findById(req.params.workoutId, (err, workout)=>{
+//         if(err){
+//             console.log(err)
+//         } else {
+//             deletedExercises.forEach(item => {
+//                 let fileId = new ObjectId(item)
+//                 Workout.findByIdAndUpdate( workout._id , { $pull: { exercises: { _id: fileId } } } )
+//             })
+//             workout.save();
+//             console.log(workout)
+//             res.redirect(`/workout/${workout._id}`)
+//         }
+//     })

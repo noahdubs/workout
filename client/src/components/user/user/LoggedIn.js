@@ -1,5 +1,5 @@
 import React from 'react'
-import Loading from './Loading'
+
 class LoggedIn extends React.Component {
     state = {}
 
@@ -20,13 +20,21 @@ class LoggedIn extends React.Component {
         )
         }else if(user._id === profileOwner){
             return (
-                <div className="col-md-4">
-                    <a href="/workout/new" className="btn btn-primary">Add a new workout</a>
-                    <a href={`/users/${user._id}/edit`} className="btn btn-warning">Edit profile</a>
-                    <form action={`/api/users/${user._id}?_method=DELETE`} method="POST">
-                        <button className="btn btn-danger">Delete profile</button>
-                    </form>
-                </div>
+                <div className="user-options">
+                    <div className="dropdown user-div-b">
+                        <button className="btn btn-secondary dropdown-toggle dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i className="fas fa-cog dropdown-btn"></i>
+                        </button>
+                        <div className="dropdown-menu user-div-b" aria-labelledby="dropdownMenuButton">
+                            <a className="dropdown-item" href={`/users/${user._id}/edit`}>Edit profile <i className="fas fa-user-edit"></i></a>
+                            <form action={`/api/users/${user._id}?_method=DELETE`} method="POST">
+                                <button className="dropdown-item">Delete your profile <i className="fas fa-trash"></i></button>
+                            </form>  
+                        </div>
+                    </div>
+                    <a className="btn workout-btn user-new-wo" href="/workout/new">Add a new workout <i className="far fa-plus-square"></i></a>
+                </div>                     
+                
             )
         } else {
             return (

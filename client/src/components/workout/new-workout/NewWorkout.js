@@ -1,5 +1,4 @@
 import React from 'react'
-import Search from './Search'
 import AllExercises from './AllExercises'
 import AddedExercises from './AddedExercises'
 

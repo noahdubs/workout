@@ -1,5 +1,4 @@
 import React from 'react'
-import Loading from './Loading'
 
 class LoggedIn extends React.Component {
     state = {}
@@ -15,7 +14,6 @@ class LoggedIn extends React.Component {
     render() {
         const user = this.state.user
         const workout = this.props.workout
-        console.log(this.state)
         if(!user){
             return (
                 <div></div>
@@ -32,7 +30,7 @@ class LoggedIn extends React.Component {
             
         } else {
             return (
-                <div className="col-md-2"></div>
+                <div></div>
             )
         }
         

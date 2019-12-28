@@ -1,19 +1,21 @@
 import React from 'react'
+import Select from './Select'
 
 const Form = props => {
     return (
         <form action="/api/exercise" method="post" encType="multipart/form-data">
             <h2 className="form-name">Add a new exercise</h2>
             <div className="form-group">
-                <label for="exercise name">Exercise Name</label>
+                <label>Exercise Name</label>
                     <input type="text" name="name" onChange={props.handleChange}  placeholder="exercise name" className="form-control form-box" /> 
             </div>
+            <Select />
             <div className="form-group">
-                <label for="exercise description">Exercise description</label>
+                <label>Exercise description</label>
                     <input type="text" name="description" onChange={props.handleChange}  placeholder="exercise description" className="form-control form-box" /> 
             </div>
             <div className="form-group">
-                <label for="exercise picture">Exercise picture</label>
+                <label>Exercise picture</label>
                     <input type="file" name="image" className="form-control file-input" /> 
             </div>
             <button className="btn new-ex-btn workout-btn">Submit new exercise</button>

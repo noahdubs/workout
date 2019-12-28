@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WorkoutsHeading = props => {
+const WorkoutsHeading = () => {
     return (
         <div className="container workouts-div">
             <div className="jumbotron">

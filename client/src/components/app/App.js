@@ -1,9 +1,9 @@
 import React from 'react'
 
+import Landing from '../landing/Landing'
 import Navbar from '../partials/navbar/Navbar'
 import Footer from '../partials/footer/Footer'
 
-import Landing from '../landing/Landing'
 import Register from '../index/register/Register'
 import Login from '../index/login/Login'
 
@@ -18,6 +18,7 @@ import EditWorkout from '../workout/edit/EditWorkout'
 import Exercises from '../exercise/exercises/Exercises'
 import Exercise from '../exercise/exercise/Exercise'
 import NewExercise from '../exercise/newexercise/NewExercise'
+import EditExercise from '../exercise/edit/EditExercise'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -46,6 +47,7 @@ const App = () => {
                 <Route path="/exercise" exact component={Exercises} />
                 <Route path="/exercise/new" exact component={NewExercise} />
                 <Route path="/exercise/:exerciseId" exact component={Exercise} />
+                <Route path="/exercise/:exerciseId/edit" exact component={EditExercise} />
             </Switch>
             <Footer />
         </Router>

@@ -53,6 +53,9 @@ router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
     const newExercise = {
         name: req.body.name, 
         description: req.body.description,
+        exerciseType: req.body.exerciseType,
+        muscleGroup: req.body.muscleGroup,
+        equipment: req.body.equipment,
         picture: image
     }
     Exercise.create(newExercise, (err, exercise)=>{
@@ -67,35 +70,30 @@ router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
     });
 });
 
-router.get("/find/:search", (req, res)=>{
-    const search = req.params.search
-    Exercise.find({name:search}, (err, exercises)=>{
-        if(err){
-            console.log(err);
-        } else {
-            res.json(exercises);
-        }
-    })
-})
-
-router.put("/:exerciseId", middleWare.isLoggedIn, (req, res)=>{
-    Exercise.findByIdAndUpdate(req.params.exerciseId, req.body, (err, updatedExercise)=>{
-        if(err) {
-            console.log(err);
-        } else {
-            res.json(updatedExercise);
-        }
-    });
+router.put("/:exerciseId", parser.single("image"), middleWare.checkExerciseOwner, (req, res)=>{
+    if(req.file){
+        Exercise.findByIdAndUpdate(req.params.exerciseId, {
+            $set: {
+                picture: {
+                    url: req.file.url,
+                    id: req.file.id 
+                }
+            }
+        })
+            .catch(err => {
+                console.log(err)
+                res.status(500).send("Error")
+            })
+    }
+    Exercise.findByIdAndUpdate(req.params.exerciseId, req.body)
+        .then(updatedExercise => {
+            res.redirect(`/exercise/${updatedExercise._id}`)
+        }) 
+        .catch(err => {
+            console.log(err)
+            res.status(500).send("Error")
+        })   
 });
 
-router.delete("/:exerciseId", middleWare.isLoggedIn, (req, res)=>{
-    Exercise.findByIdAndDelete(req.params.exerciseId, (err)=>{
-        if(err) {
-            console.log(err);
-        } else {
-            res.redirect("back");
-        }
-    })
-})
 
 module.exports = router;

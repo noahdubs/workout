@@ -35,6 +35,7 @@ router.post("/register", parser.single("image"), (req, res)=>{
     const newUser = new User({
         username: req.body.username,
         name: req.body.name,
+        bio: req.body.bio,
         picture: image 
     });
     User.register(newUser, req.body.password, (err, user)=>{

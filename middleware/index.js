@@ -30,4 +30,36 @@ middlewareObj.checkUser = (req, res, next)=> {
     }
 }
 
+middlewareObj.checkWorkoutOwner = (req, res, next) => {
+    if(req.isAuthenticated()){
+        Workout.findById(req.params.workoutId, (err, foundWorkout) => {
+            if(err) {
+                res.redirect("back")
+            } else {
+                if(foundWorkout.author.id.equals(req.user._id)){
+                    next()
+                } else {
+                    res.redirect("back")
+                }
+            }
+        })
+    }
+}
+
+middlewareObj.checkExerciseOwner = (req, res, next) => {
+    if(req.isAuthenticated()){
+        Exercise.findById(req.params.exerciseId, (err, foundExercise)=>{
+            if(err){
+                console.log(err)
+            } else {
+                if(foundExercise.author.id.equals(req.user._id)){
+                    next()
+                } else {
+                    res.redirect("back")
+                }
+            }
+        })
+    }
+}
+
 module.exports = middlewareObj;

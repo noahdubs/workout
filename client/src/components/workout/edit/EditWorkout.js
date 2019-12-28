@@ -25,9 +25,11 @@ class EditWorkout extends React.Component {
         const exercises = this.state.workout.exercises 
         const newState = []
         let deletedWorkout = {}
+        let counter = 0
         exercises.forEach(exercise => {
-            if(exercise._id._id === exerciseId){
-                deletedWorkout = exercise 
+            if(exercise._id._id === exerciseId && counter === 0){
+                deletedWorkout = exercise
+                counter ++ 
             } else {
                 newState.push(exercise)
             }
@@ -49,7 +51,6 @@ class EditWorkout extends React.Component {
     }
 
     render() {    
-        console.log(this.state)
         const workout = this.state.workout
         if (!workout) {
             return (

@@ -6,7 +6,7 @@ const Workouts = ({ workouts }) => {
             {workouts.map(workout => (
                 <div key={workout._id}  className="col-lg-3 col-sm-6">
                     <div className="card wo-card">
-                        <img class="card-img-top" src={workout.picture.url}/>
+                        <img class="card-img-top" src={workout.picture.url} alt={workout.name} />
                         <div className="card-body">
                             <h5 className="card-title">{workout.name}</h5>
                             <p className="card-text">{workout.description}</p>

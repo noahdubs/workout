@@ -20,6 +20,7 @@ class User extends React.Component {
     render() {
         const user = this.state.user;
         const workouts = user.workouts;
+        console.log(user)
         if(!workouts) {
             return (
                 <Loading />

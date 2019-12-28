@@ -26,10 +26,10 @@ class LoggedIn extends React.Component {
             return (
                 <ul className="navbar-nav navbar-right r-padding">
                     <li className="nav-item">
-                        <a href={`/users/${user._id}`} className="nav-link link-nav"><i class="fas fa-user icon"></i> Profile</a>
+                        <a href={`/users/${user._id}`} className="nav-link link-nav"><i className="fas fa-user icon"></i> Profile</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/" onClick={this.logout} className="nav-link link-nav"><i class="fas fa-sign-out-alt icon"></i> Logout</a>
+                        <a href="/" onClick={this.logout} className="nav-link link-nav"><i className="fas fa-sign-out-alt icon"></i> Logout</a>
                     </li>
                 </ul>
                 
@@ -38,10 +38,10 @@ class LoggedIn extends React.Component {
             return (
                 <ul className="navbar-nav navbar-right r-padding">
                     <li className="nav-item">
-                        <a href="/login" className="nav-link link-nav"><i class="fas fa-sign-in-alt icon"></i> Login</a>
+                        <a href="/login" className="nav-link link-nav"><i className="fas fa-sign-in-alt icon"></i> Login</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/register" className="nav-link link-nav"><i class="fas fa-user-plus icon"></i> Register</a>
+                        <a href="/register" className="nav-link link-nav"><i className="fas fa-user-plus icon"></i> Register</a>
                     </li>
                 </ul>
                 

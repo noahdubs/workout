@@ -25,7 +25,7 @@ app.use(flash());
 mongoose.connect("mongodb://localhost:27017/workout", {useNewUrlParser:true, useUnifiedTopology:true});
 
 app.use(require("express-session")({
-    secret: "secret code",
+    secret: process.env.SECRET_CODE,
     resave: false,
     saveUninitialized: false 
 }));

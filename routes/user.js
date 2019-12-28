@@ -1,7 +1,23 @@
 const express = require("express"),
       passport = require("passport"),
       User = require("../models/user"),
-      middleware = require("../middleware/index");
+      middleware = require("../middleware/index"),
+      cloudinary = require("cloudinary"),
+      multer = require('multer'),
+      cloudinaryStorage = require("multer-storage-cloudinary");
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET 
+});
+const storage = cloudinaryStorage({
+    cloudinary: cloudinary,
+    folder: "exercise",
+    allowedFormats: ["jpg", "png", "jpeg"],
+    transformation: [{ width: 500, height: 500, crop: "limit" }]
+});
+const parser = multer({ storage: storage });
 
 const router = express.Router({mergeParams: true});
 
@@ -27,14 +43,29 @@ router.get("/", (req, res)=>{
 });
 
 // update
-router.put("/:userId", middleware.checkUser, (req, res)=>{
-    User.findByIdAndUpdate(req.params.userId, req.body, (err, updatedUser)=>{
-        if(err) {
-            console.log(err);
-        } else {
+router.put("/:userId", parser.single("image"),  middleware.checkUser, (req, res)=>{
+    if(req.file){
+        User.findByIdAndUpdate(req.params.userId, {
+            $set: {
+                picture: {
+                    url: req.file.url,
+                    id: req.file.public_id
+                }
+            }
+        })
+            .catch(err => {
+                console.log(err)
+                res.status(500).send("Error")
+            })
+    }
+    User.findByIdAndUpdate(req.params.userId, req.body)
+        .then(updatedUser => {
             res.redirect(`/users/${updatedUser._id}`)
-        }
-    });
+        .catch(err => {
+            console.log(err)
+            res.status(500).send("Error")
+        })
+    })
 });
 
 // delete 

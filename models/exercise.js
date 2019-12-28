@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const exerciseSchema = new mongoose.Schema ({
     name: String,
-    description: String, 
+    description: String,
+    exerciseType: String,
+    muscleGroup: String,
+    equipment: String,
     picture: {
         id: String, 
         url: String 

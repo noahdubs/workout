@@ -48,7 +48,6 @@ class Carousel extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="carousel landing-div">
                 <Arrow 

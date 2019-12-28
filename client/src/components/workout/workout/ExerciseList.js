@@ -11,7 +11,7 @@ const ExerciseList = ({ exercises }) => {
                         </div>
                     </div>
                     <div className="col-md-4 img-div">
-                        <img src={exercise._id.picture.url} className="wo-ex-picture" />
+                        <img src={exercise._id.picture.url} className="wo-ex-picture" alt={exercise.name} />
                     </div>
                     <div className="col-md-4 wo-reps-sets">
                         <h5>{exercise.sets} sets</h5>

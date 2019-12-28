@@ -16,7 +16,7 @@ const AllExercises = props => {
                         <h3 className="card-title"><a className="new-wo-ex-title" href={`/exercise/${exercise._id}`}>{exercise.name}</a></h3>
                     </div>
                     <div className="col-md-4">
-                        <img src={exercise.picture.url} className="card-img" />
+                        <img src={exercise.picture.url} className="card-img" alt={exercise.name} />
                     </div>
                     <div className="col-md-2 add-btn-col">
                         <i className="far fa-plus-square add-ex" 
