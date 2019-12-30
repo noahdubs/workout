@@ -32,7 +32,8 @@ class LoggedIn extends React.Component {
                             </form>  
                         </div>
                     </div>
-                    <a className="btn workout-btn user-new-wo" href="/workout/new">Add a new workout <i className="far fa-plus-square"></i></a>
+                    <a className="btn workout-btn user-new-wo" href="/workout/new">Add a new workout <i className="far fa-plus-square"></i></a><br />
+                    <a className="btn workout-btn user-new-wo" href="/exercise/new">Add a new exercise <i className="far fa-plus-square"></i></a>
                 </div>                     
                 
             )
