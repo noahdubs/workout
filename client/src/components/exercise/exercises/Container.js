@@ -1,15 +1,24 @@
 import React from 'react'
-import Jumbotron from './Jumbotron'
 import AllExercises from './AllExercises'
+import LeftNavbar from '../../partials/left-nav/LeftNavbar'
+import Search from './Search'
 
-const Container = ({ exercises }) => {
+const Container = props => {
     return (
-        <div className="container exs-div">
-            <Jumbotron />
-            <h1>All Exercises</h1>
-            <AllExercises 
-                exercises={exercises}
-            />
+        <div className="container wo-div">
+            <div className="row">
+                <LeftNavbar />
+                <div className="col-md-9 all-wo-col">
+                    <Search 
+                        handleChange={props.handleChange}
+                        handleSearch={props.handleSearch}
+                        search={props.search}
+                    />
+                    <AllExercises 
+                        exercises={props.exercises}
+                    />
+                </div>
+            </div>
         </div>
     )
 }

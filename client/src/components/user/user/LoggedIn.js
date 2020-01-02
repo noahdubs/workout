@@ -20,7 +20,7 @@ class LoggedIn extends React.Component {
         )
         }else if(user._id === profileOwner){
             return (
-                <div className="user-options">
+                <div>
                     <div className="dropdown user-div-b">
                         <button className="btn btn-secondary dropdown-toggle dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i className="fas fa-cog dropdown-btn"></i>
@@ -32,8 +32,6 @@ class LoggedIn extends React.Component {
                             </form>  
                         </div>
                     </div>
-                    <a className="btn workout-btn user-new-wo" href="/workout/new">Add a new workout <i className="far fa-plus-square"></i></a><br />
-                    <a className="btn workout-btn user-new-wo" href="/exercise/new">Add a new exercise <i className="far fa-plus-square"></i></a>
                 </div>                     
                 
             )

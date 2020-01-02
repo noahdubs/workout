@@ -4,7 +4,8 @@ import Container from './Container'
 class Exercises extends React.Component {
     state = {
         exercises: [],
-        name: ""
+        search: "",
+        foundExercises: []
     }
 
     componentDidMount = () => {
@@ -18,27 +19,33 @@ class Exercises extends React.Component {
         this.setState({[name]:value})
     }
 
-    handleSubmit = event => {
-        event.preventDefault();
-
-        const exercise = this.state.name
-        console.log(exercise)
-        fetch("/api/exercise", {
-            method: "POST",
-            body: JSON.stringify(exercise),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(res => res.json())
-        .then(response => console.log("success:", JSON.stringify(response)))
-        .catch(error => console.log("error:", error));
+    handleSearch = () => {
+        const search = this.state.search
+        const exercises = this.state.exercises 
+        const foundExercises = []
+        exercises.forEach(exercise => {
+            const searchString = search.toLocaleLowerCase()
+            const name = exercise.name.toLocaleLowerCase()
+            if(name.includes(searchString)){
+                foundExercises.push(exercise)
+            } 
+        })
+        this.setState({foundExercises: foundExercises})
     }
 
     render() {
-        const exercises = this.state.exercises;
+        console.log(this.state)
+        const foundExercises = this.state.foundExercises
+        let exercises = this.state.exercises
+        if(foundExercises.length > 0) {
+            exercises = this.state.foundExercises
+        } 
         return (
             <Container 
                 exercises={exercises}
+                handleChange={this.handleChange}
+                handleSearch={this.handleSearch}
+                search={this.state.search}
             />
         )
     }

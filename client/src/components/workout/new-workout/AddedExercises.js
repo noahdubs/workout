@@ -6,7 +6,7 @@ const AddedExercises = props => {
         <div className="col-md-6 new-ex-right">
             <form action="/api/workout" method="POST" encType="multipart/form-data">
                 <SubmitWorkout />
-                <h3 className="new-wo-h">Added Exercises</h3> 
+                <h4 className="new-wo-h">Added Exercises</h4> 
                 {props.addedExercises.map(exercise => (
                     <div className="row new-ex-card" key={exercise.id}>
                         <div className="col-md-5">

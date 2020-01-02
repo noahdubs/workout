@@ -73,12 +73,12 @@ body {
     background-color: #236192;
 }
 .wo-card {
-    background-color: #9EA2A2;
+    background-color: #0C2340;
     padding: .5em;
     margin: 15px 0;  
     border: 3px solid #0C2340;
     border-radius: 10px;  
-    color: #0C2340;
+    color: white;
 }
 .wo-sm-btn {
     background-color: #236192;
@@ -133,11 +133,6 @@ body {
     padding: 1em 0 .25em 0;
     margin: 0 4em .5em 4em;
     border-bottom: 3px solid #0C2340;
-}
-.new-wo-ex-btn {
-    background-color: #0C2340;
-    color: white;
-    margin-left: 1em;
 }
 .new-wo-search-btn {
     background-color: #78BE20;
@@ -215,7 +210,6 @@ body {
 }
 .form-content {
     padding: 4em;
-    border: 2px solid #78BE20;
     background-color: #236192;
     color: white;
     border-radius: 10px;
@@ -324,11 +318,18 @@ body {
 .user-options {
     margin-top: 5em;
 }
+.user-col {
+    background-color: #236192;
+    padding: 2em;
+    border-radius: 10px;
+}
+.all-user-wos {
+    padding-top: 4em;
+}
 /* new exercise page */
 .new-ex-row {
     background-color: #236192;
-    padding: 3em;
-    border: 3px solid #78BE20;
+    padding: 1em;
     border-radius: 10px;
 }
 .new-ex-information {
@@ -338,6 +339,16 @@ body {
 .new-ex-item {
     font-size: 11px;
     margin: 1em .5em 1em .5em;
+}
+.new-ex-form {
+    width: 70%;
+}
+.new-ex-formm {
+    background-color: #236192;
+    padding: 2em;
+}
+.new-ex-col {
+    border-radius: 10px;
 }
 /* All exericises page */
 .exs-div {
@@ -359,6 +370,18 @@ body {
     color: #0C2340;
     font-weight: 700;
     margin-bottom: 0;
+}
+.search-ex {
+    display: flex;
+    align-items: center;
+}
+.ex-search{
+    margin-left: 4em;
+}
+.ex-search-btn {
+    background-color: #78BE20;
+    color: white;
+    height: 50%;
 }
 /* landing page styles */
 .landing-div {
@@ -470,6 +493,11 @@ html, body, #root, .carousel, .image-center {
     color: #0C2340;
     font-weight: 700;
 }
+.ind-ex-col {
+    background-color: #236192;
+    border-radius: 10px;
+    padding: 2em;
+}
 /* side navabr styles */
 .left-nav-item {
     background-color: #236192;
@@ -486,6 +514,9 @@ html, body, #root, .carousel, .image-center {
 .left-nav-link:hover {
     color: #78BE20;
     text-decoration: none;
+}
+#navbar-left {
+    padding-bottom: 2em;
 }
 
 

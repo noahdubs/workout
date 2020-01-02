@@ -1,6 +1,7 @@
 import React from 'react'
 import AllExercises from './AllExercises'
 import AddedExercises from './AddedExercises'
+import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 class NewWorkout extends React.Component {
     state = {
@@ -61,17 +62,21 @@ class NewWorkout extends React.Component {
             exercises = this.state.foundExercises
         } 
         return (
-            <div className="container new-ex-div">
-                <h1 className="add-ex-h">Create New Workout</h1>
-                <div className="row new-wo-container">
-                        <AllExercises 
-                            exercises={exercises}
-                            onClick={this.handleClick}
-                            value={this.state.search}
-                            handleSearch={this.handleSearch}
-                            handleChange={this.handleChange}
-                        />
-                        <AddedExercises addedExercises={addedExercises}/>
+            <div className="container wo-div">
+                <div className="row">
+                    <LeftNavbar />
+                    <div className="col-md-9">
+                        <div className="row new-ex-row">
+                            <AllExercises 
+                                    exercises={exercises}
+                                    onClick={this.handleClick}
+                                    value={this.state.search}
+                                    handleSearch={this.handleSearch}
+                                    handleChange={this.handleChange}
+                                />
+                            <AddedExercises addedExercises={addedExercises}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

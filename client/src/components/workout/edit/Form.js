@@ -2,15 +2,15 @@ import React from 'react'
 
 const Form = props => {
     return (
-        <form action={`/api/workout/${props.workout._id}?_method=PUT`} method="POST" encType="multipart/form-data">
+        <form action={`/api/workout/${props.workout._id}?_method=PUT`} method="POST" encType="multipart/form-data" className="new-ex-col new-ex-formm">
             <h2 className="form-name">Edit Workout</h2>
             <div className="form-group">
                 <label className="edit-wo-ex-name" >Workout name</label>
-                <input type="text" name="name" placeholder={props.workout.name} className="form-control form-box"/>
+                <input type="text" name="name" placeholder={props.workout.name} className="form-control form-box new-ex-form"/>
             </div>
             <div className="form-group">
                 <label className="edit-wo-ex-name" >Description</label>
-                <input type="text" name="description" placeholder={props.workout.description}  className="form-control form-box"/>
+                <input type="text" name="description" placeholder={props.workout.description}  className="form-control form-box new-ex-form"/>
             </div>
             <div className="form-group">
                 <label className="edit-wo-ex-name" >Workout picture</label>

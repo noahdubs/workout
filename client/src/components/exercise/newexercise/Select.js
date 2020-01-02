@@ -5,14 +5,14 @@ const Select = () => {
         <div>
             <div className="form-group">
                 <label >Exercise type</label>
-                <select name="exerciseType" className="form-control form-box">
+                <select name="exerciseType" className="form-control form-box new-ex-form">
                     <option value="Strength">Strength</option>
                     <option value="Cardio">Cardio</option>
                 </select>
             </div>
             <div className="form-group">
                 <label >Muscle Group</label>
-                <select name="muscleGroup" className="form-control form-box">
+                <select name="muscleGroup" className="form-control form-box new-ex-form">
                     <option value="Abdominals">Abdominals</option>
                     <option value="Abductors">Abductors</option>
                     <option value="Biceps">Biceps</option>
@@ -32,7 +32,7 @@ const Select = () => {
             </div>
             <div className="form-group">
                 <label >Equipment used</label>
-                <select name="equipment" className="form-control form-box">
+                <select name="equipment" className="form-control form-box new-ex-form">
                     <option value="Dumbell">Dumbell</option>
                     <option value="Barbell">Barbell</option>
                     <option value="Cable">Cable</option>

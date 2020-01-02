@@ -1,13 +1,19 @@
 import React from 'react'
 import Jumbotron from './Jumbotron'
 import Workouts from './Workouts'
+import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const Container = ({ user }) => {
     return (
-        <div className="container user-div">
-            <Jumbotron user={user} />
-            <h3>Workouts made by {user.name}</h3>
-            <Workouts workouts={user.workouts} />
+        <div className="container wo-div">
+            <div className="row">
+                <LeftNavbar />
+                <div className="col-md-9 user-col">
+                    <Jumbotron user={user} />
+                    <Workouts workouts={user.workouts} user={user} />
+                </div>
+            </div>
+            
         </div>
     )
 }

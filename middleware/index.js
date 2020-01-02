@@ -27,6 +27,8 @@ middlewareObj.checkUser = (req, res, next)=> {
                 }
             }
         })
+    } else {
+        res.redirect("/login");
     }
 }
 
@@ -43,6 +45,8 @@ middlewareObj.checkWorkoutOwner = (req, res, next) => {
                 }
             }
         })
+    } else {
+        res.redirect("/login");
     }
 }
 
@@ -59,6 +63,8 @@ middlewareObj.checkExerciseOwner = (req, res, next) => {
                 }
             }
         })
+    } else {
+        res.redirect("/login");
     }
 }
 

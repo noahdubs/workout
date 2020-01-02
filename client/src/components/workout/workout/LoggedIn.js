@@ -22,7 +22,7 @@ class LoggedIn extends React.Component {
             return (
                 <div>
                     <a href={`/workout/${workout._id}/edit`} className="btn btn-warning">Edit workout</a>
-                    <form action={`/api/workout/${workout._id}?_method="DELETE"`} method="POST">
+                    <form action={`/api/workout/${workout._id}?_method=DELETE`} method="POST">
                         <button className="btn btn-danger">Delete workout</button>
                     </form>
                 </div>   

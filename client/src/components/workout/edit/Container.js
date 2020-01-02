@@ -1,19 +1,21 @@
 import React from 'react'
 import Form from './Form'
+import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const Container = props => {
     return (
-        <div className="row form-div">
-            <div className="col-md-3"></div>
-            <div className="col-md-6 form-content">
-                <Form 
-                    handleChange={props.handleChange}
-                    workout={props.workout}
-                    handleClick={props.handleClick}
-                    deleted={props.deleted}
-                />
+        <div className="container wo-div">
+            <div className="row">
+                <LeftNavbar />
+                <div className="col-md-9">
+                    <Form 
+                        handleChange={props.handleChange}
+                        workout={props.workout}
+                        handleClick={props.handleClick}
+                        deleted={props.deleted}
+                    />
+                </div>
             </div>
-            <div className="col-md-3"></div>
         </div>
     )
 }

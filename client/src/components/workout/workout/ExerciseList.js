@@ -6,7 +6,7 @@ const ExerciseList = ({ exercises }) => {
             {exercises.map(exercise => (
                 <div className="row ex-one">
                     <div className="col-md-3 wo-ex-name">
-                        <h3><a href={exercise._id._id} className="left-nav-link">{exercise._id.name}</a></h3>
+                        <h3><a href={`/exercise/${exercise._id._id}`} className="left-nav-link">{exercise._id.name}</a></h3>
                     </div>
                     <div className="col-md-3 wo-reps-sets">
                         <p className="sets">{exercise.sets} sets</p>
