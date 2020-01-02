@@ -1,5 +1,4 @@
 import React from 'react'
-import WorkoutsHeading from './WorkoutsHeading'
 import WorkoutsContainer from './WorkoutsContainer'
 
 class Workout extends React.Component {
@@ -46,7 +45,6 @@ class Workout extends React.Component {
         
         return (
             <div>
-                <WorkoutsHeading />
                 <WorkoutsContainer 
                     value={this.state.search}
                     onChange={this.handleChange}

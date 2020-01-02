@@ -19,6 +19,7 @@ class Workout extends React.Component {
     render() {
         const workout = this.state.workout
         const exercises = this.state.workout.exercises;
+        console.log(exercises)
         if(!workout.exercises) {
             return (
                 <Loading />

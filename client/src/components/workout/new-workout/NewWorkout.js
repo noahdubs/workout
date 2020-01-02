@@ -27,7 +27,6 @@ class NewWorkout extends React.Component {
     }
 
     handleClick = event => {
-        console.dir(event.target.attributes.title.value) 
         const exerciseId = event.target.attributes.value.value;
         const exerciseName = event.target.attributes.title.value;
         this.setState(prev => {

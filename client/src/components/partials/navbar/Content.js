@@ -11,11 +11,6 @@ const Content = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <ul className="navbar-nav mr-auto"></ul>
-                <ul className="navbar-nav navbar-right l-space">
-                    <li className="nav-item">
-                        <a href="/workout" className="nav-link link-nav"><i className="fas fa-dumbbell icon"></i> Workout</a>
-                    </li>
-                </ul>
                 <LoggedIn />
             </div>
         </nav>

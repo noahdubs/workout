@@ -20,12 +20,12 @@ class LoggedIn extends React.Component {
             )
         } else if(user._id === workout.author.id) {
             return (
-                <div className="col-md-2">
+                <div>
                     <a href={`/workout/${workout._id}/edit`} className="btn btn-warning">Edit workout</a>
                     <form action={`/api/workout/${workout._id}?_method="DELETE"`} method="POST">
                         <button className="btn btn-danger">Delete workout</button>
                     </form>
-                </div>
+                </div>   
             )
             
         } else {
