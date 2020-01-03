@@ -519,6 +519,13 @@ html, body, #root, .carousel, .image-center {
     padding-bottom: 2em;
 }
 
+/* input number styles */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 
 
 

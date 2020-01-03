@@ -7,7 +7,7 @@ const express = require('express'),
       cors = require("cors"),
       methodOverride = require("method-override"),
       flash = require("connect-flash"),
-      path = require("path")
+      path = require("path");
 
 require('dotenv').config();
 
@@ -24,7 +24,7 @@ app.use(methodOverride("_method"));
 app.use(flash());
 app.use(express.static("client/build"));
 
-mongoose.connect("mongodb://localhost:27017/workout", {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect(`mongodb+srv://noahdubs:${process.env.CLUSTER_PASSWORD}@cluster0-wbttr.mongodb.net/workout?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(require("express-session")({
     secret: process.env.SECRET_CODE,
