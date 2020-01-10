@@ -1,6 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/app/App'
-import './styles.css'
+import './styles/styles.css'
+import './styles/workout.css'
+import './styles/workouts.css'
+import './styles/new-workout.css'
+import './styles/btn-loading.css'
+import './styles/exercise.css'
+import './styles/exercises.css'
+import './styles/forms.css'
+import './styles/landing.css'
+import './styles/navbar.css'
+import './styles/new-exercise.css'
+import './styles/user.css'
 
 ReactDOM.render(<App />, document.getElementById('root'))

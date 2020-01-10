@@ -5,11 +5,14 @@ import WorkoutsHeading from './WorkoutsHeading'
 import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const WorkoutsContainer = props => {
+    const currentPage = "Workouts"
     return (
-        <div className="container wo-div">
+        <div className="wo-div">
             <div className="row">
-                <LeftNavbar />
-                <div className="col-md-9 all-wo-col">
+                <LeftNavbar 
+                    currentPage={currentPage}
+                />
+                <div className="col-md-10">
                     <Search 
                         value={props.value}
                         onChange={props.onChange}

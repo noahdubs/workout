@@ -5,10 +5,10 @@ import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const Container = ({ user }) => {
     return (
-        <div className="container wo-div">
+        <div className="wo-div">
             <div className="row">
                 <LeftNavbar />
-                <div className="col-md-9 user-col">
+                <div className="col-md-10">
                     <Jumbotron user={user} />
                     <Workouts workouts={user.workouts} user={user} />
                 </div>

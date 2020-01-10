@@ -1,0 +1,45 @@
+/* landing page styles */
+.landing-div {
+    margin-top: 3%;
+}
+html, body, #root, .carousel, .image-center {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+.image-slide {
+    height: 100%;
+    width: 100%;
+    transition: background-image .3s ease-in-out;
+    align-items: center;
+}
+.image-center {
+    align-items: center;
+}
+.content {
+    align-items: center;
+    text-align: center;
+}
+.slide-arrow {
+    color: #0C2340;
+    cursor: pointer;
+    font-size: 3rem;
+    position: fixed;
+    top: 50%;
+}
+.slide-arrow.right {
+    right: 1rem;
+}
+.slide-arrow.left {
+    left: 1rem;
+}
+.landing-heading {
+    color: white;
+    padding-bottom: 3%;
+}
+.landing-btn {
+    background-color: #0C2340;
+    width: 35%;
+    color: white;
+    font-size: large;
+}

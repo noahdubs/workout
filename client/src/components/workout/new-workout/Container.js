@@ -4,7 +4,7 @@ import Search from './Search'
 
 const Container = props => {
     return (
-        <div className="container new-ex-div">
+        <div className="new-ex-div">
             <h1 className="add-ex-h">Create New Workout</h1>
             <div className="row">
                 <AllExercises 

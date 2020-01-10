@@ -1,0 +1,27 @@
+/* all button style */
+.user-new-wo {
+    background-color: #0C2340;
+    color: white;
+    margin-top: 2em;
+}
+.workout-btn:hover {
+    color: #78BE20;
+}
+.workout-btn:focus {
+    color: #78BE20;
+}
+.workout-btn-inverse:hover{
+    color: #0C2340;
+}
+.workout-btn-inverse:focus{
+    color: #0C2340;
+}
+
+/* loading page */
+.loader {
+    margin: 15em 0em 0em 40em !important;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    color: #78BE20;
+}

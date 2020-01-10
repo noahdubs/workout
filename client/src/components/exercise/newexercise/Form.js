@@ -3,7 +3,7 @@ import Select from './Select'
 
 const Form = props => {
     return (
-        <form action="/api/exercise" method="post" encType="multipart/form-data" className="new-ex-formm new-ex-col">
+        <form action="/api/exercise" method="post" encType="multipart/form-data">
             <h2 className="form-name">Add a new exercise</h2>
             <div className="form-group">
                 <label>Exercise Name</label>

@@ -1,0 +1,55 @@
+/* Workouts page styles */
+.workouts-div {
+    margin-top: 5em;
+    color: white;
+}
+.all-wo-col {
+    background-color: #236192;
+    padding: 2em;
+    border-radius: 10px;
+}
+.wo-heading {
+    font-size: 63px;
+}
+.wo-p {
+    font-size: 21px;
+}
+.btn-add-wo {
+    background-color: #0C2340;
+    color: white;
+    width: 15em;
+    font-weight: 500;
+}
+.wos-container {
+    padding: 1.5em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+    background-color: #236192;
+}
+.wo-card {
+    background-color: #0C2340;
+    padding: .5em;
+    margin: 15px 0;  
+    border: 3px solid #0C2340;
+    border-radius: 10px;  
+    color: white;
+}
+.wo-sm-btn {
+    background-color: #236192;
+    width: 7em;
+    color: white;
+}
+.wo-search {
+    display: flex;
+    justify-content: space-between;
+}
+.wo-search-bar {
+    margin-right: 1em;
+    height: 2.5em;
+}
+.wo-search-btn {
+    background-color: #0C2340;
+    color: white;
+    width: 7em;
+    height: 2.5em;
+}

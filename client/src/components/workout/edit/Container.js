@@ -4,10 +4,10 @@ import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const Container = props => {
     return (
-        <div className="container wo-div">
+        <div className="wo-div">
             <div className="row">
                 <LeftNavbar />
-                <div className="col-md-9">
+                <div className="col-md-10">
                     <Form 
                         handleChange={props.handleChange}
                         workout={props.workout}

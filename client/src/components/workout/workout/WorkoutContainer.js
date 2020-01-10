@@ -5,10 +5,10 @@ import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const WorkoutContainer = props => {
     return (
-        <div className="container wo-div">
+        <div className="wo-div">
             <div className="row">
                 <LeftNavbar />
-                <div className="col-md-9 wo-general">
+                <div className="col-md-10">
                     <WorkoutHeading workout={props.workout} />
                     <h3>Exercises</h3>
                     <ExerciseList  exercises={props.exercises} />

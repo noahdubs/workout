@@ -5,10 +5,10 @@ import Search from './Search'
 
 const Container = props => {
     return (
-        <div className="container wo-div">
+        <div className="wo-div">
             <div className="row">
                 <LeftNavbar />
-                <div className="col-md-9 all-wo-col">
+                <div className="col-md-10">
                     <Search 
                         handleChange={props.handleChange}
                         handleSearch={props.handleSearch}

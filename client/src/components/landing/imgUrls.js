@@ -1,7 +1,8 @@
 const imgUrls = [
-    "https://images.unsplash.com/photo-1535743686920-55e4145369b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325881/a-man-who-is-experiencing-masturbation-before-a-workout.jpg?w=1155&h=1541",
+    "https://www.wellandgood.com/wp-content/uploads/2019/04/GettyImages-woman-workout-tired-svetikd-1.jpg",
+    "https://images.askmen.com/1080x540/2018/03/08-044252-the_date_night_workout.jpg"
+
 ]
 
 export default imgUrls

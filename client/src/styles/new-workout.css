@@ -1,0 +1,112 @@
+/* New workout page */
+.card-img {
+    border-radius: 10px;
+    border: 2px solid #9EA2A2;
+}
+.add-btn-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-ex-name {
+    display: flex;
+    align-items: center;
+}
+.new-ex-div {
+    margin-top: 5em;
+    background-color: #236192;
+    padding: 3em;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.add-ex-h {
+    padding-bottom: .25em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid #78BE20;
+}
+.new-ex-left {
+    border-right: 3px solid #0C2340;
+}
+.new-wo-h {
+    text-align: center;
+    padding: 1em 0 .25em 0;
+    margin: 0 4em .5em 4em;
+    border-bottom: 3px solid #0C2340;
+}
+.new-wo-search-btn {
+    background-color: #78BE20;
+    color: white;
+}
+.new-wo-container {
+    border: 3px solid #0C2340;
+    border-radius: 10px;
+    height: 800px;
+    overflow-y: scroll;
+}
+.new-wo-searchBar {
+    height: 35px;
+    width: 175px;
+    border: 2px solid #0C2340;
+    margin-right: 10px;
+}
+.new-wo-search-div {
+    padding: .5em 0;
+}
+.new-wo-search-h {
+    padding-top: 1em;
+}
+.new-ex-card {
+    border-bottom: 2px solid #78BE20;
+    margin: .5em;
+    padding: .5em;
+}
+.new-wo-ex-title {
+    color: white !important;
+}
+.new-wo-ex-title:hover{
+    color: #0C2340 !important;
+    text-decoration: none;
+}
+.add-ex {
+    font-size: 40px;
+}
+.invisible-ex {
+    opacity: 0;
+    cursor: default;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+}
+.reps-sets {
+    width: 40%;
+    border: 2px solid #0C2340;
+    margin-right: .25em;
+}
+.reps-label {
+    font-size: 20px;
+    padding-right: .25em;
+}
+.btn-submit-wo {
+    background-color: #0C2340;
+    color: white;
+}
+.submit-wo-div {
+    padding-top: 1em;
+}
+.file-input {
+    background-color: #236192;
+    border: none;
+    color: white;
+}
+.info-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* input number styles */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

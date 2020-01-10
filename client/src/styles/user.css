@@ -1,0 +1,43 @@
+/* User profile page styles */
+.dropdown-btn {
+    background-color: #236192;
+    border: none;
+    font-size: 25px;
+}
+.dropdown-btn:hover{
+    background-color: #236192;
+}
+.dropdown-btn:focus {
+    background-color: #236192;
+}
+.profile-pic {
+    border-radius: 50px;
+    border: 3px solid #0C2340;
+    width: 100%;
+}
+.user-div {
+    margin-top: 5em;
+}
+.user-jumbo {
+    border-radius: 10px;
+    background-color: #236192;
+    padding: 2em;
+    margin-bottom: 2em;
+    border: 3px solid #78BE20;
+}
+.user-row {
+    background-color: #236192;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.user-options {
+    margin-top: 5em;
+}
+.user-col {
+    background-color: #236192;
+    padding: 2em;
+    border-radius: 10px;
+}
+.all-user-wos {
+    padding-top: 4em;
+}

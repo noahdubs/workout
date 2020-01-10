@@ -1,0 +1,42 @@
+/* individual workout page */
+.wo-ex-picture {
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #0C2340;
+}
+.img-div {
+    display: flex;
+    align-items: center;
+}
+.wo-div {
+    margin-top: 6em;
+}
+.ex-information {
+    font-size: 12px;
+}
+.ex-span {
+    color: #0C2340;
+}
+.wo-general {
+    background-color: #236192;
+    padding: 2em;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 3em;
+}
+.ex-one {
+    padding: 1em ;
+    border-top: 3px solid #9EA2A2;
+}
+.wo-reps-sets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sets {
+    margin-right: 2em;
+}
+.wo-ex-name {
+    display: flex;
+    align-items: center;
+}

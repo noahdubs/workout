@@ -1,0 +1,33 @@
+/* All exericises page */
+.exs-div {
+    margin-top: 5em;
+}
+.ex-row {
+    background-color: #236192;
+    border: 3px solid #78BE20;
+    border-radius: 10px;
+}
+.new-ex-btn {
+    background-color: #0C2340;
+    margin: 1em;
+    width: 15em;
+    color: white;
+}
+.user-bio {
+    margin-top: 2em;
+    color: #0C2340;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.search-ex {
+    display: flex;
+    align-items: center;
+}
+.ex-search{
+    margin-left: 4em;
+}
+.ex-search-btn {
+    background-color: #78BE20;
+    color: white;
+    height: 50%;
+}

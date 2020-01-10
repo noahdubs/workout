@@ -62,11 +62,11 @@ class NewWorkout extends React.Component {
             exercises = this.state.foundExercises
         } 
         return (
-            <div className="container wo-div">
+            <div className="wo-div">
                 <div className="row">
                     <LeftNavbar />
-                    <div className="col-md-9">
-                        <div className="row new-ex-row">
+                    <div className="col-md-10">
+                        <div className="row">
                             <AllExercises 
                                     exercises={exercises}
                                     onClick={this.handleClick}

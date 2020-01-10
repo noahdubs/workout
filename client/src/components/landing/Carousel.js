@@ -9,7 +9,7 @@ class Carousel extends React.Component {
     }
     
     componentDidMount = () => {
-        const interval = setInterval(this.next, 5000);
+        const interval = setInterval(this.next, 3000);
         this.setState({currentImageIndex:interval})
     }
     componentWillUnmount = () => {
@@ -50,17 +50,11 @@ class Carousel extends React.Component {
     render() {
         return (
             <div className="carousel landing-div">
-                <Arrow 
-                    direction="left"
-                    clickFunction={ this.previousSlide }
-                />
+                
 
                 <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
 
-                <Arrow 
-                    direction="right"
-                    clickFunction={ this.nextSlide }
-                />
+                
             </div>
         )
     }
