@@ -2,7 +2,6 @@ import React from 'react'
 
 import Landing from '../landing/Landing'
 import Navbar from '../partials/navbar/Navbar'
-import Footer from '../partials/footer/Footer'
 
 import Register from '../index/register/Register'
 import Login from '../index/login/Login'
@@ -48,7 +47,6 @@ const App = () => {
                 <Route path="/exercise/:exerciseId" exact component={Exercise} />
                 <Route path="/exercise/:exerciseId/edit" exact component={EditExercise} />
             </Switch>
-            <Footer />
         </Router>
     )
 }

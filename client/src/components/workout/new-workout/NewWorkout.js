@@ -56,7 +56,7 @@ class NewWorkout extends React.Component {
     render() {
         const addedExercises = this.state.addedExercises
         const foundExercises = this.state.foundExercises
-
+        const currentPage = "NewWorkout"
         let exercises = this.state.exercises
         if(foundExercises.length > 0) {
             exercises = this.state.foundExercises
@@ -64,7 +64,9 @@ class NewWorkout extends React.Component {
         return (
             <div className="wo-div">
                 <div className="row">
-                    <LeftNavbar />
+                    <LeftNavbar 
+                        currentPage={currentPage}
+                    />
                     <div className="col-md-10">
                         <div className="row">
                             <AllExercises 

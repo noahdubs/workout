@@ -1,7 +1,6 @@
 import React from 'react'
 import Search from './Search'
 import ShowWorkouts from './ShowWorkouts'
-import WorkoutsHeading from './WorkoutsHeading'
 import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 
 const WorkoutsContainer = props => {
@@ -12,7 +11,7 @@ const WorkoutsContainer = props => {
                 <LeftNavbar 
                     currentPage={currentPage}
                 />
-                <div className="col-md-10">
+                <div className="col-md-9 all-wo-main-col">
                     <Search 
                         value={props.value}
                         onChange={props.onChange}

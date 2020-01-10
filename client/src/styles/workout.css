@@ -9,7 +9,8 @@
     align-items: center;
 }
 .wo-div {
-    margin-top: 6em;
+    margin-top: 4em;
+    border-top: 2px solid #CFCFCF;
 }
 .ex-information {
     font-size: 12px;

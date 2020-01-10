@@ -27,29 +27,78 @@
     background-color: #236192;
 }
 .wo-card {
-    background-color: #0C2340;
-    padding: .5em;
+    background-color: white;
     margin: 15px 0;  
-    border: 3px solid #0C2340;
+    border: 2px solid #CFCFCF;
     border-radius: 10px;  
-    color: white;
+    color: #5B5B5B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
 }
 .wo-sm-btn {
     background-color: #236192;
     width: 7em;
     color: white;
 }
-.wo-search {
+.all-wo-h {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    height: 70px;
+    padding-bottom: 2em;
+    border-bottom: 2px solid #CFCFCF;
+    padding-top: 1.5em;
 }
 .wo-search-bar {
     margin-right: 1em;
-    height: 2.5em;
+    height: 35px;
 }
-.wo-search-btn {
-    background-color: #0C2340;
-    color: white;
-    width: 7em;
-    height: 2.5em;
+.all-wo-h1 {
+    margin-right: 2em;
+}
+.all-wo-img {
+    float: left;
+    width: 250px;
+    height: 200px;
+    background-size: cover;
+    padding: 1em .5em 0 .5em;
+}
+.card-body {
+    width: 100%;
+    border-top: 2px solid #CFCFCF;
+    align-items: center;
+    background-color: white;
+}
+.all-wo-author {
+    font-size: 14px;
+    color: #5B5B5B
+}
+.all-wo-author:hover{
+    color: #008BEE;
+    text-decoration: none;
+}
+.all-wo-icon {
+    color: #008BEE;
+    margin-right: .5em;
+}
+.card-title {
+    color: #474747;
+    font-weight: 600;
+    font-size: 18px;
+}
+.all-wo-title-link:hover {
+    text-decoration: none;
+}
+.right-ws {
+    border-left: 2px solid #CFCFCF;
+    height: 100%;
+}
+.all-wo-main-col {
+    border-right: 2px solid #CFCFCF;
+    overflow-y: scroll;
+
+}
+.all-wo-row {
+    height: 100%;
 }

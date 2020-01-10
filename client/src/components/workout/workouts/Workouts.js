@@ -39,6 +39,7 @@ class Workout extends React.Component {
     render() {
         let workouts = this.state.workouts
         const foundWorkouts = this.state.foundWorkouts
+        console.log(this.state)
         if(foundWorkouts.length > 0){
             workouts = foundWorkouts
         }

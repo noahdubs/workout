@@ -25,3 +25,40 @@
     margin: auto;
     color: #78BE20;
 }
+
+/* input number styles */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="text"]{
+    width: 40%;
+    height:40px;
+    padding-right: 50px;
+    padding-left: 10px;
+    border: 1px solid #5B5B5B;
+    border-radius: 4px;
+}
+input[type="text"]:hover{
+    border: 1px solid #5B5B5B;
+}
+input[type="text"]:focus{
+    border: 1px solid #5B5B5B;
+}
+.btn-search-icon{
+    margin-left: -50px;
+    height: 40px;
+    width: 50px;
+    background-color: white;
+    border-top: 1px solid #5B5B5B;
+    border-right: 1px solid #5B5B5B;
+    border-bottom: 1px solid #5B5B5B;
+    border-left: none;
+    color: #393939;
+    border-radius: 4px;
+}
+.btn-search-icon:hover{
+    background-color: #DCDCDC;
+}

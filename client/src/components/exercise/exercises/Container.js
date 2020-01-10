@@ -4,10 +4,11 @@ import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 import Search from './Search'
 
 const Container = props => {
+    const currentPage = "Exercises"
     return (
         <div className="wo-div">
             <div className="row">
-                <LeftNavbar />
+                <LeftNavbar currentPage={currentPage} />
                 <div className="col-md-10">
                     <Search 
                         handleChange={props.handleChange}
