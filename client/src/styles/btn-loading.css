@@ -51,13 +51,14 @@ input[type="text"]:focus{
     margin-left: -50px;
     height: 40px;
     width: 50px;
-    background-color: white;
+    background-color: #008BEE;
     border-top: 1px solid #5B5B5B;
     border-right: 1px solid #5B5B5B;
     border-bottom: 1px solid #5B5B5B;
     border-left: none;
-    color: #393939;
+    color: white;
     border-radius: 4px;
+    border: 2px solid #008BEE;
 }
 .btn-search-icon:hover{
     background-color: #DCDCDC;

@@ -2,10 +2,18 @@ import React from 'react'
 
 const Search = props => {
     return (
-        <div className="form-group new-wo-search-div search-ex">
-            <h1>All exercises</h1>
-            <input type="text" name="search" placeholder="search" value={props.search} onChange={props.handleChange} className="new-wo-searchBar ex-search" />
-            <button onClick={props.handleSearch} className="btn ex-search-btn">Search</button>
+        <div className="all-wo-h">
+            <h3 className="all-wo-h1">All exercises</h3>
+            <input id="wo-search-bar"
+                type="text" 
+                name="search" 
+                placeholder="Search Exercises" 
+                value={props.search} 
+                onChange={props.handleChange} 
+            />
+            <button onClick={props.handleSearch} className="btn-search-icon">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
     )
 }

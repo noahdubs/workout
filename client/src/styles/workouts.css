@@ -50,19 +50,19 @@
     border-bottom: 2px solid #CFCFCF;
     padding-top: 1.5em;
 }
-.wo-search-bar {
-    margin-right: 1em;
-    height: 35px;
+#wo-search-bar {
+    height: 40px;
+    border: 2px solid #008BEE !important;
 }
 .all-wo-h1 {
     margin-right: 2em;
+    font-weight: 500;
 }
 .all-wo-img {
     float: left;
-    width: 250px;
+    width: 100%;
     height: 200px;
     background-size: cover;
-    padding: 1em .5em 0 .5em;
 }
 .card-body {
     width: 100%;
@@ -85,7 +85,7 @@
 .card-title {
     color: #474747;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 .all-wo-title-link:hover {
     text-decoration: none;
@@ -96,9 +96,19 @@
 }
 .all-wo-main-col {
     border-right: 2px solid #CFCFCF;
-    overflow-y: scroll;
-
-}
-.all-wo-row {
     height: 100%;
 }
+.all-wo-row {
+    position: absolute;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 95%;
+}
+.wo-div {
+    height: 100%;
+    height: calc(100% - 150px);
+    box-sizing: border-box;
+} 
+

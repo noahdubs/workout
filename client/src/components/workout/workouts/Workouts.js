@@ -45,14 +45,12 @@ class Workout extends React.Component {
         }
         
         return (
-            <div>
                 <WorkoutsContainer 
                     value={this.state.search}
                     onChange={this.handleChange}
                     onClick={this.handleSearch}
                     workouts={workouts}
                 />
-            </div>
         )
         
     }

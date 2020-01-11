@@ -7,9 +7,9 @@ const Container = props => {
     const currentPage = "Exercises"
     return (
         <div className="wo-div">
-            <div className="row">
+            <div className="row all-ex-row">
                 <LeftNavbar currentPage={currentPage} />
-                <div className="col-md-10">
+                <div className="col-md-10 all-wo-main-col">
                     <Search 
                         handleChange={props.handleChange}
                         handleSearch={props.handleSearch}

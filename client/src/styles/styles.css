@@ -8,9 +8,13 @@ aurora green: #78BE20
 body styles */
 body {
     background-color: white;
-    color: #0C2340;
+    color: #5B5B5B;
     overflow: hidden;
     
+}
+
+html, body {
+    height: 100%;
 }
 
 

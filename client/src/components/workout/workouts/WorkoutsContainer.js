@@ -7,7 +7,7 @@ const WorkoutsContainer = props => {
     const currentPage = "Workouts"
     return (
         <div className="wo-div">
-            <div className="row">
+            <div className="row all-ex-row">
                 <LeftNavbar 
                     currentPage={currentPage}
                 />

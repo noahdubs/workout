@@ -4,7 +4,7 @@ const Search = props => {
     return (
         <div className="all-wo-h">
             <h3 className="all-wo-h1">All Workouts</h3>
-            <input className="wo-search-bar" 
+            <input id="wo-search-bar" 
                 type="text" 
                 placeholder="Search Workouts"
                 onChange={props.onChange} 
