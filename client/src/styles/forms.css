@@ -4,20 +4,20 @@
 }
 .form-content {
     padding: 4em;
-    background-color: #236192;
-    color: white;
     border-radius: 10px;
 }
 .form-button {
-    background-color: #0C2340;
+    background-color: #008BEE ;
     width: 10em;
     color: white;
+    margin-top: 20px;
 }
 .form-box {
-    border: 2px solid #78BE20;
+    border: 1px solid #008BEE ;
+    width: 40%;
 }
 .form-name{
-    border-bottom: 1px solid #78BE20;
+    border-bottom: 1px solid #CFCFCF;
     padding-bottom: .5em;
     margin-bottom: 1em;
 }
@@ -34,4 +34,15 @@
 }
 .edit-wo-ex-name {
     font-size: 20px;
+}
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-name {
+    color: #008BEE ;
+}
+.reg-div {
+    margin-top: 20px;
 }

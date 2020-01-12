@@ -4,11 +4,9 @@
     color: white;
     margin-top: 2em;
 }
-.workout-btn:hover {
-    color: #78BE20;
-}
-.workout-btn:focus {
-    color: #78BE20;
+.workout-btn:hover,
+.workout-btn:focus  {
+    color: white;
 }
 .workout-btn-inverse:hover{
     color: #0C2340;
@@ -38,14 +36,14 @@ input[type="text"]{
     height:40px;
     padding-right: 50px;
     padding-left: 10px;
-    border: 1px solid #5B5B5B;
+    border: 1px solid #008BEE ;
     border-radius: 4px;
 }
 input[type="text"]:hover{
-    border: 1px solid #5B5B5B;
+    border: 1px solid #008BEE ;
 }
 input[type="text"]:focus{
-    border: 1px solid #5B5B5B;
+    border: 1px solid #008BEE ;
 }
 .btn-search-icon{
     margin-left: -50px;

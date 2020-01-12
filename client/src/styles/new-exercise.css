@@ -13,12 +13,40 @@
     margin: 1em .5em 1em .5em;
 }
 .new-ex-form {
-    width: 70%;
+    width: 100%;
+    height: 100%;
 }
-.new-ex-formm {
-    background-color: #236192;
-    padding: 2em;
-}
+
 .new-ex-col {
     border-radius: 10px;
+}
+.new-ex-bc{
+    margin-bottom: 40px;
+}
+.select-col {
+    min-height: 100%;
+}
+#new-ex-name {
+    width: 100%;
+}
+#new-ex-desc {
+    width: 100%;
+}
+.new-ex-select {
+    width: 100%;
+    height: 40px;
+}
+.new-ex-group {
+    margin-bottom: 30px;
+}
+.new-ex-button {
+    background-color: #008BEE;
+    color: white;
+}
+.new-ex-button:hover, 
+.new-ex-button:hover {
+    color: white;
+}
+.new-ex-file {
+    border: none;
 }

@@ -6,13 +6,29 @@ const Form = props => {
             <h2 className="form-name">Login</h2>
             <div className="form-group">
                 <label>Username</label>
-                <input name="username" type="text" onChange={props.handleChange} className="form-control form-box" />
+                <div className="input-group">
+                    <input 
+                        name="username" 
+                        type="text" 
+                        onChange={props.handleChange} 
+                        className="form-control form-box" 
+                    />
+                </div>
             </div>
             <div className="form-group">
                 <label>Password</label>
-                <input type="password" name="password" onChange={props.handleChange} className="form-control form-box" />
+                <div className="input-group">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        onChange={props.handleChange} 
+                        className="form-control form-box"
+                    />
+                </div>
             </div>
-            <button className="btn form-button workout-btn">Login <i className="fas fa-sign-in-alt"></i></button>
+            <button className="btn form-button workout-btn">Login 
+                <i className="fas fa-sign-in-alt"></i>
+            </button>
         </form>
     )
 }

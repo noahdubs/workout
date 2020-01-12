@@ -1,7 +1,6 @@
 /* New workout page */
 .card-img {
     border-radius: 10px;
-    border: 2px solid #9EA2A2;
 }
 .add-btn-col {
     display: flex;
@@ -12,43 +11,22 @@
     display: flex;
     align-items: center;
 }
-.new-ex-div {
-    margin-top: 5em;
-    background-color: #236192;
-    padding: 3em;
-    border: 3px solid #78BE20;
-    border-radius: 10px;
-}
 .add-ex-h {
     padding-bottom: .25em;
     margin-bottom: 1em;
     border-bottom: 3px solid #78BE20;
 }
 .new-ex-left {
-    border-right: 3px solid #0C2340;
+    border-left: 3px solid #CFCFCF;
 }
 .new-wo-h {
     text-align: center;
     padding: 1em 0 .25em 0;
     margin: 0 4em .5em 4em;
-    border-bottom: 3px solid #0C2340;
+    border-bottom: 2px solid #CFCFCF;
+    color: #008BEE;
 }
-.new-wo-search-btn {
-    background-color: #78BE20;
-    color: white;
-}
-.new-wo-container {
-    border: 3px solid #0C2340;
-    border-radius: 10px;
-    height: 800px;
-    overflow-y: scroll;
-}
-.new-wo-searchBar {
-    height: 35px;
-    width: 175px;
-    border: 2px solid #0C2340;
-    margin-right: 10px;
-}
+
 .new-wo-search-div {
     padding: .5em 0;
 }
@@ -56,13 +34,11 @@
     padding-top: 1em;
 }
 .new-ex-card {
-    border-bottom: 2px solid #78BE20;
+    border-bottom: 2px solid #CFCFCF;
     margin: .5em;
     padding: .5em;
 }
-.new-wo-ex-title {
-    color: white !important;
-}
+
 .new-wo-ex-title:hover{
     color: #0C2340 !important;
     text-decoration: none;
@@ -70,7 +46,7 @@
 .add-ex {
     font-size: 40px;
 }
-.invisible-ex {
+#invisible-ex {
     opacity: 0;
     cursor: default;
     height: 0;
@@ -80,8 +56,8 @@
 }
 .reps-sets {
     width: 40%;
-    border: 2px solid #0C2340;
     margin-right: .25em;
+    border: 1px solid #008BEE;
 }
 .reps-label {
     font-size: 20px;
@@ -101,6 +77,54 @@
 }
 .info-group {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.new-wo-img {
+    padding: 0;
+    
+}
+.new-wo-ex-name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.new-wo-ex-title {
+    color: #008BEE;
+    font-size: 18px;
+}
+.new-wo-imgs {
+    float: left;
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+}
+.add-btn-col {
+    padding:0;
+}
+#new-wo-search-bar {
+    width: 100%;
+}
+.new-wo-file {
+    border: none;
+}
+.new-workout-button {
+    background-color: #008BEE;
+    color: white;
+}
+.new-workout-button:hover,
+.new-workout-button:focus {
+    color: white;
+}
+.added-ex-name {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-wo-add-ex {
+    margin: 0 auto;
+    padding-top: 2em;
+    font-size: 20px;
 }
 

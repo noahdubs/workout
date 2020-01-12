@@ -9,11 +9,11 @@ const AddedExercises = props => {
                 <h4 className="new-wo-h">Added Exercises</h4> 
                 {props.addedExercises.map(exercise => (
                     <div className="row new-ex-card" key={exercise.id}>
-                        <div className="col-md-4">
-                            <h3 className="card-title"><a className="new-wo-ex-title" href={`/exercise/${exercise.id}`}>{exercise.name}</a></h3>
+                        <div className="col-md-4 added-ex-name">
+                            <h3 className="card-title"><a className="new-wo-add-ex" href={`/exercise/${exercise.id}`}>{exercise.name}</a></h3>
                         </div>
                         <div className="col-md-8 form-group info-group">
-                            <input type="text" name="exerciseId" value={exercise.id} className="invisible-ex" />
+                            <input type="text" name="exerciseId" value={exercise.id} id="invisible-ex" />
                             <label className="reps-label">Sets</label>
                             <input type="number" name="sets" className="reps-sets form-control" />
                             <label className="reps-label">Reps</label>

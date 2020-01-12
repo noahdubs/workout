@@ -6,23 +6,33 @@ const Form = props => {
             <h2 className="form-name">Register</h2>
             <div className="form-group">
                 <label>Your Name</label>
-                <input type="text" name="name" value={props.name} placeholder="name" onChange={props.handleChange} className="form-control form-box"/>
+                <div className="input-group">
+                    <input type="text" name="name" value={props.name} placeholder="name" onChange={props.handleChange} className="form-control form-box"/>
+                </div>
             </div>
             <div className="form-group">
                 <label>Username</label>
-                <input type="text" name="username" value={props.username} placeholder="username" onChange={props.handleChange} className="form-control form-box"  />
+                <div className="input-group">
+                    <input type="text" name="username" value={props.username} placeholder="username" onChange={props.handleChange} className="form-control form-box"  />
+                </div>
             </div>
             <div className="form-group">
                 <label>Password</label>
-                <input type="password" name="password" value={props.password} onChange={props.handleChange} placeholder="password" className="form-control form-box" />
+                <div className="input-group">
+                    <input type="password" name="password" value={props.password} onChange={props.handleChange} placeholder="password" className="form-control form-box" />
+                </div>
             </div>
             <div className="form-group">
-                <label>Profile Picture</label><br />
-                <input type="file" name="image" />
+                <label>Profile Picture</label>
+                <div className="">
+                    <input type="file" name="image" />
+                </div>
             </div>
             <div className="form-group">
-                <label>Bio</label><br />
-                <textarea rows="5" type="text" name="bio" className="form-control form-box" />
+                <label>Bio</label>
+                <div className="input-group">
+                    <textarea rows="5" type="text" name="bio" className="form-control form-box" />
+                </div>
             </div>
             <button className="btn form-button workout-btn">Register <i className="fas fa-user-plus icon"></i></button>
         </form>

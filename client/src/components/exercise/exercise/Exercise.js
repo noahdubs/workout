@@ -15,6 +15,7 @@ class Exercise extends React.Component {
 
     render() {
         const exercise = this.state.exercise;
+        console.log(exercise)
         if (!exercise) {
             return (
                 <Loading />

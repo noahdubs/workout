@@ -10,14 +10,11 @@
 }
 .wo-div {
     margin-top: 4em;
-    border-top: 2px solid #CFCFCF;
 }
 .ex-information {
-    font-size: 12px;
+    font-size: 15px;
 }
-.ex-span {
-    color: #0C2340;
-}
+
 .wo-general {
     background-color: #236192;
     padding: 2em;
@@ -27,7 +24,7 @@
 }
 .ex-one {
     padding: 1em ;
-    border-top: 3px solid #9EA2A2;
+    border-top: 2px solid #CFCFCF;
 }
 .wo-reps-sets {
     display: flex;
@@ -40,4 +37,28 @@
 .wo-ex-name {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.ind-wo-author {
+    padding-top: 50px;
+}
+.ind-wo-ex-img {
+    width: 100%;
+    height: 130px;
+}
+.ind-wo-ex-name {
+    color: #008BEE;
+}
+.ind-wo-ex-name:hover,
+.ind-wo-ex-name:focus {
+    color: #008BEE;
+    text-decoration: none;
+}
+.ind-wo-ex-rs {
+    font-size: 20px;
+    margin: 0 auto;
+}
+.wo-ex-info {
+    margin: auto;
+    text-align: center;
 }

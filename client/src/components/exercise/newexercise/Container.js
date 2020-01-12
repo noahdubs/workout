@@ -1,14 +1,16 @@
 import React from 'react'
 import Form from './Form'
 import LeftNavbar from '../../partials/left-nav/LeftNavbar'
+import Breadcrumb from './Breadcrumb'
 
 const Container = props => {
     const currentPage = "NewExercise"
     return (
         <div className="wo-div">
-            <div className="row">
+            <div className="row all-ex-row">
                 <LeftNavbar currentPage={currentPage} />
-                <div className="col-md-10">
+                <div className="col-md-10 all-wo-main-col">
+                    <Breadcrumb />
                     <Form handleChange={props.handleChange} />
                 </div>
             </div>
@@ -16,4 +18,4 @@ const Container = props => {
     )
 }
 
-export default Container 
+export default Container

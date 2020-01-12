@@ -101,10 +101,12 @@
 .all-wo-row {
     position: absolute;
     overflow-y: scroll;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 95%;
+    border-right: 3px solid #CFCFCF;
 }
 .wo-div {
     height: 100%;

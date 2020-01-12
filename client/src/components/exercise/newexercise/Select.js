@@ -3,16 +3,16 @@ import React from 'react'
 const Select = () => {
     return (
         <div>
-            <div className="form-group">
+            <div className="form-group new-ex-group">
                 <label >Exercise type</label>
-                <select name="exerciseType" className="form-control form-box new-ex-form">
+                <select name="exerciseType" className="form-control form-box new-ex-select">
                     <option value="Strength">Strength</option>
                     <option value="Cardio">Cardio</option>
                 </select>
             </div>
-            <div className="form-group">
+            <div className="form-group new-ex-group">
                 <label >Muscle Group</label>
-                <select name="muscleGroup" className="form-control form-box new-ex-form">
+                <select name="muscleGroup" className="form-control form-box new-ex-select">
                     <option value="Abdominals">Abdominals</option>
                     <option value="Abductors">Abductors</option>
                     <option value="Biceps">Biceps</option>
@@ -30,9 +30,9 @@ const Select = () => {
                     <option value="Triceps">Triceps</option>
                 </select>
             </div>
-            <div className="form-group">
+            <div className="form-group new-ex-group">
                 <label >Equipment used</label>
-                <select name="equipment" className="form-control form-box new-ex-form">
+                <select name="equipment" className="form-control form-box new-ex-select">
                     <option value="Dumbell">Dumbell</option>
                     <option value="Barbell">Barbell</option>
                     <option value="Cable">Cable</option>
