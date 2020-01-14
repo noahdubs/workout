@@ -15,12 +15,10 @@ const ExerciseHeading = ({ exercise }) => {
                 <p> Submitted by 
                     <a href={`/users/${exercise.author.id}`} className="new-wo-ex-title"> {exercise.author.username}</a>
                 </p>
-                <div className="description">
-                    <h3 className="ind-ex-h">How to perform {exercise.name}:</h3>
-                    <p>{exercise.description}</p>
-                </div>
-                </div>
-            <LoggedIn exercise={exercise}/>
+                <h3 className="ind-ex-h">How to perform {exercise.name}:</h3>
+                <p>{exercise.description}</p>
+                <LoggedIn exercise={exercise}/>
+            </div>
         </div>
     )
 }

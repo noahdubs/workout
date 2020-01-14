@@ -20,7 +20,7 @@ class LoggedIn extends React.Component {
             )
         } else if(user._id === exercise.author.id){
             return (
-                <div>
+                <div className="ind-wo-edit">
                     <a href={`/exercise/${exercise._id}/edit`} className="btn btn-warning">Edit Exercise</a>
                 </div>
                

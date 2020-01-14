@@ -83,12 +83,13 @@
 }
 .description {
     margin-top: 50px;
-    height: 100%;
+    height: 30%;
 }
 .ex-info {
    display: inline;
    align-items: center;
    margin-top: 45px;
+   height: 100%;
 }
 .ind-ex-h {
     color: #008BEE;

@@ -46,3 +46,24 @@
 .reg-div {
     margin-top: 20px;
 }
+.reps-sets-label {
+    margin-right: 1em;
+}
+.reps-sets-labels {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.reps-input {
+    border: 1px solid #008BEE;
+    margin-right: 1em;
+}
+.edit-wo-ex {
+    font-size: 20px;
+    color: #008BEE;
+}
+.edit-wo-col {
+    height: 100%;
+}
+.file-control {
+    border: none;
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import ImageSlide from './ImageSlide'
-import Arrow from './Arrow'
 import imgUrls from './imgUrls'
 
 class Carousel extends React.Component {
