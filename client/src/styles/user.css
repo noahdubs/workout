@@ -10,11 +10,7 @@
 .dropdown-btn:focus {
     background-color: #236192;
 }
-.profile-pic {
-    border-radius: 50px;
-    border: 3px solid #0C2340;
-    width: 100%;
-}
+
 .user-div {
     margin-top: 5em;
 }
@@ -40,4 +36,60 @@
 }
 .all-user-wos {
     padding-top: 4em;
+}
+.workouts-exercises-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 8px 8px -5px #757575;
+}
+.wo-ex-choose {
+    font-size: 20px;
+    padding: 5px;
+}
+.wo-ex-choose:hover,
+.wo-ex-choose:focus {
+    cursor: pointer;
+    background-color: rgba(0,139,238,0.2) !important;
+    color: #008BEE;
+    
+}
+
+.active-style{
+    color: #008BEE;
+}
+.user-wos-row {
+    width: 100%;
+}
+.user-heading {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.profile-pic {
+    border-radius: 500px;
+    width: 80%;
+    box-shadow: 0 0 8px #757575;
+}
+.user-pro-name{
+    color: #008BEE;
+}
+.user-pro-username:hover {
+    color: #008BEE;
+    text-decoration: none;
+}
+.user-pro-username {
+    color: #5B5B5B;
+    text-decoration: none;
+}
+.user-edit-btn {
+    background-color: #008BEE;
+    color: white;
+    margin-top: 2em;
+    width: 50%;
+}
+.user-edit-btn:hover,
+.user-edit-btn:focus {
+    color: white;
 }

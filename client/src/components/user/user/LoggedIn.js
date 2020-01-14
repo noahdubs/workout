@@ -20,18 +20,11 @@ class LoggedIn extends React.Component {
         )
         }else if(user._id === profileOwner){
             return (
-                <div>
-                    <div className="dropdown user-div-b">
-                        <button className="btn btn-secondary dropdown-toggle dropdown-btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i className="fas fa-cog dropdown-btn"></i>
-                        </button>
-                        <div className="dropdown-menu user-div-b" aria-labelledby="dropdownMenuButton">
-                            <a className="dropdown-item" href={`/users/${user._id}/edit`}>Edit profile <i className="fas fa-user-edit"></i></a>
-                            <form action={`/api/users/${user._id}?_method=DELETE`} method="POST">
-                                <button className="dropdown-item">Delete your profile <i className="fas fa-trash"></i></button>
-                            </form>  
-                        </div>
-                    </div>
+                <div className="col-md-4">
+                    <a className="btn user-edit-btn" href={`/users/${user._id}/edit`}>Edit profile <i className="fas fa-user-edit"></i></a>
+                    <form action={`/api/users/${user._id}?_method=DELETE`} method="POST">
+                        <button className="btn user-edit-btn">Delete profile <i className="fas fa-trash"></i></button>
+                    </form>  
                 </div>                     
                 
             )

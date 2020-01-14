@@ -5,7 +5,7 @@ const ShowWorkout = ({ workouts }) => {
     return (
         <div className="row all-wo-row">
             {workouts.map(workout => (
-                <div key={workout._id}  className="col-lg-3 col-sm-6">
+                <div key={workout._id}  className="col-lg-3 col-md-4 col-sm-6">
                     <div  className="card wo-card">
                         <a href={`/workout/${workout._id}`}>
                             <img className="card-img-top all-wo-img" 

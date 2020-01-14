@@ -3,7 +3,7 @@
     background-color: transparent;
     color: #008BEE;
     padding-bottom: 13px;
-    border-bottom: 2px solid #CFCFCF;
+    box-shadow: 0 8px 8px -5px #757575;
 }
 .brand-name {
     padding-left: 10%;

@@ -18,6 +18,13 @@ const userSchema = new mongoose.Schema ({
             name: String 
         }
     ],
+    exercises: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Exercise",
+            name: String 
+        }
+    ]
     
 });
 

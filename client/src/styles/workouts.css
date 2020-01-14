@@ -29,13 +29,13 @@
 .wo-card {
     background-color: white;
     margin: 15px 0;  
-    border: 2px solid #CFCFCF;
     border-radius: 10px;  
     color: #5B5B5B;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #EEEEEE;
+    box-shadow: 0 0 8px #757575;
 }
 .wo-sm-btn {
     background-color: #236192;

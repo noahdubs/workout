@@ -64,6 +64,8 @@ router.post("/", parser.single("image"), middleWare.isLoggedIn, (req, res)=>{
         if(err) {
             console.log(err);
         } else {
+            req.user.exercises.push(exercise);
+            req.user.save();
             exercise.author.id = req.user._id;
             exercise.author.username = req.user.username;
             exercise.save();

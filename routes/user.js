@@ -22,7 +22,7 @@ const parser = multer({ storage: storage });
 const router = express.Router({mergeParams: true});
 
 router.get("/:userId", (req, res)=>{
-    User.findById(req.params.userId).populate("workouts").exec((err, foundUser)=>{
+    User.findById(req.params.userId).populate("workouts").populate("exercises").exec((err, foundUser)=>{
         if(err) {
             console.log(err);
         } else {
