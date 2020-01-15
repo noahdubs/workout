@@ -1,5 +1,6 @@
 import React from 'react'
 import WorkoutsContainer from './WorkoutsContainer'
+import Navbar from '../../partials/navbar/Navbar'
 
 class Workout extends React.Component {
     state = {
@@ -39,18 +40,22 @@ class Workout extends React.Component {
     render() {
         let workouts = this.state.workouts
         const foundWorkouts = this.state.foundWorkouts
-        console.log(this.state)
+        const current = "Workouts"
         if(foundWorkouts.length > 0){
             workouts = foundWorkouts
         }
         
         return (
+            <div className="main-div">
+                <Navbar current={current} />
                 <WorkoutsContainer 
                     value={this.state.search}
                     onChange={this.handleChange}
                     onClick={this.handleSearch}
                     workouts={workouts}
                 />
+            </div>
+                
         )
         
     }

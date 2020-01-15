@@ -1,45 +1,54 @@
 /* landing page styles */
 .landing-div {
-    margin-top: 3%;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325881/a-man-who-is-experiencing-masturbation-before-a-workout.jpg?w=1155&h=1541");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 html, body, #root, .carousel, .image-center {
     height: 100%;
     margin: 0;
     width: 100%;
 }
-.image-slide {
-    height: 100%;
-    width: 100%;
-    transition: background-image .3s ease-in-out;
-    align-items: center;
+
+.spacing {
+    height: 15%;
 }
-.image-center {
-    align-items: center;
+
+
+.box {
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+    height: 70%;
+    width: 80%;
+    background-color: transparent;
 }
-.content {
-    align-items: center;
-    text-align: center;
-}
-.slide-arrow {
-    color: #0C2340;
-    cursor: pointer;
-    font-size: 3rem;
-    position: fixed;
-    top: 50%;
-}
-.slide-arrow.right {
-    right: 1rem;
-}
-.slide-arrow.left {
-    left: 1rem;
+.square{
+    background-color: #008BEE;
+    height: 90%;
+    color: white;
+    border-radius: 10px;
 }
 .landing-heading {
     color: white;
-    padding-bottom: 3%;
+    font-weight: 700;
+}
+.landing-p {
+    color: white;
+    font-weight: 500;
 }
 .landing-btn {
-    background-color: #0C2340;
-    width: 35%;
-    color: white;
-    font-size: large;
+    background-color: white;
+    color: #008BEE;
+    font-weight: 600;
+}
+.landing-btn:hover,
+.landing-btn:focus {
+    color: #008BEE;
+}
+.landing-icon {
+    margin-left: 1em;
 }

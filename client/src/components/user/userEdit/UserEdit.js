@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container'
+import Navbar from '../../partials/navbar/Navbar'
 
 class UserEdit extends React.Component {
     state = {
@@ -22,11 +23,16 @@ class UserEdit extends React.Component {
     }
 
     render() {
+        const current = "EditUser"
         return (
-            <Container 
-                user={this.state.user} 
-                handleChange={this.handleChange} 
-            />
+            <div className="main-div">
+                <Navbar current={current} />
+                <Container 
+                    user={this.state.user} 
+                    handleChange={this.handleChange} 
+                />
+            </div>
+            
         )
     }
 }

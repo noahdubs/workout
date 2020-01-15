@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container'
+import Navbar from '../../partials/navbar/Navbar'
 
 class Register extends React.Component {
     state = {
@@ -14,13 +15,18 @@ class Register extends React.Component {
     }
     
     render() {
+        const current = "Register"
         return (
-            <Container 
-                handleChange={this.handleChange}
-                name={this.state.name}
-                username={this.state.username}
-                password={this.state.password}
-            />
+            <div className="main-div">
+                <Navbar current={current} />
+                <Container 
+                    handleChange={this.handleChange}
+                    name={this.state.name}
+                    username={this.state.username}
+                    password={this.state.password}
+                />
+            </div>
+            
         )
     }
 }

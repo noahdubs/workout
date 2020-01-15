@@ -13,5 +13,6 @@ import './styles/landing.css'
 import './styles/navbar.css'
 import './styles/new-exercise.css'
 import './styles/user.css'
+import './styles/landingMedia.css'
 
 ReactDOM.render(<App />, document.getElementById('root'))

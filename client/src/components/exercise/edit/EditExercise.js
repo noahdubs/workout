@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import Loading from '../exercise/Loading'
+import Navbar from '../../partials/navbar/Navbar'
 
 class EditExercise extends React.Component {
     state = {}
@@ -15,15 +16,20 @@ class EditExercise extends React.Component {
 
     render() {
         const exercise = this.state.exercise
+        const current = "EditExercise"
         if (!exercise) {
             return (
                 <Loading />
             )
         } else {
             return (
-                <Container
-                    exercise={exercise}
-                />
+                <div className="main-div"> 
+                    <Container
+                        exercise={exercise}
+                    />
+                    <Navbar current={current} />
+                </div>
+               
             )
         }
     }

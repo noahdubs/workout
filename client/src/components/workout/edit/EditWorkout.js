@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import Loading from '../workout/Loading'
+import Navbar from '../../partials/navbar/Navbar'
 
 class EditWorkout extends React.Component {
     state = {
@@ -52,18 +53,23 @@ class EditWorkout extends React.Component {
 
     render() {    
         const workout = this.state.workout
+        const current = "EditWorkout"
         if (!workout) {
             return (
                 <Loading />
             )
         } else {
             return (
-                <Container
-                    workout={this.state.workout}
-                    handleChange={this.handleChange}
-                    handleClick={this.handleClick}
-                    deleted={this.state.deleted}
-                />
+                <div className="main-div">
+                    <Navbar current={current} />
+                    <Container
+                        workout={this.state.workout}
+                        handleChange={this.handleChange}
+                        handleClick={this.handleClick}
+                        deleted={this.state.deleted}
+                    />
+                </div>
+                
             )
         }
 

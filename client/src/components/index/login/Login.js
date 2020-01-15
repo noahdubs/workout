@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container'
+import Navbar from '../../partials/navbar/Navbar'
 
 class Login extends React.Component {
     state = {
@@ -13,8 +14,12 @@ class Login extends React.Component {
     }
 
     render() {
+        const current = "Login"
         return (
-            <Container handleChange={this.handleChange} />
+            <div className="main-div">
+                <Navbar current={current} />
+                <Container handleChange={this.handleChange} />
+            </div>
         )
     }
 }

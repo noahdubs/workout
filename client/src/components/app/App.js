@@ -22,10 +22,9 @@ import EditExercise from '../exercise/edit/EditExercise'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 
-const App = () => {
+const App = props => {
     return (
         <Router>
-            <Navbar /> 
             <Switch>
                 <Route path="/" exact component={Landing} />
                 <Route path="/register" exact component={Register} />

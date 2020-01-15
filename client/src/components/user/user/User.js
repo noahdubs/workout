@@ -3,6 +3,7 @@ import Container from './Container'
 import Loading from './Loading'
 import Exercises from './Exercises'
 import Workouts from './Workouts'
+import Navbar from '../../partials/navbar/Navbar'
 
 class User extends React.Component {
     state = {
@@ -38,19 +39,23 @@ class User extends React.Component {
     render() {
         const user = this.state.user;
         const workouts = user.workouts;
-        console.log(this.state)
+        const current = "User"
         if(!workouts) {
             return (
                 <Loading />
             )
         } else {
             return (
-                <Container 
-                    user={user}
-                    current={this.state.current}
-                    currentStr={this.state.currentStr}
-                    handleClick={this.handleClick}
-                />
+                <div className="main-div">
+                    <Navbar current={current} />
+                    <Container 
+                        user={user}
+                        current={this.state.current}
+                        currentStr={this.state.currentStr}
+                        handleClick={this.handleClick}
+                    />
+                </div>
+                
             )
         }
         

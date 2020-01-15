@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from './Container';
+import Navbar from '../../partials/navbar/Navbar'
 
 class NewExercise extends React.Component {
     state = {
@@ -12,10 +13,15 @@ class NewExercise extends React.Component {
     }
 
     render() {
+        const current = "NewExercise"
         return (
-            <Container 
-                handleChange={this.handleChange}
-            />
+            <div className="main-div">
+                <Navbar current={current} />
+                <Container 
+                    handleChange={this.handleChange}
+                />
+            </div>
+            
         )
     }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import LoggedIn from './LoggedIn'
 
 const ExerciseHeading = ({ exercise }) => {
+    console.log(exercise)
     return (
         <div className="row all-wo-row ind-ex-row"> 
             <div className="col-md-8">
@@ -25,4 +26,3 @@ const ExerciseHeading = ({ exercise }) => {
 
 export default ExerciseHeading
 
-{/* <img src={exercise.author.picture.url} /> */}

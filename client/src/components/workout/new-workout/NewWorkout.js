@@ -3,6 +3,7 @@ import AllExercises from './AllExercises'
 import AddedExercises from './AddedExercises'
 import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 import Breadcrumb from './Breadcrumb'
+import Navbar from '../../partials/navbar/Navbar'
 
 class NewWorkout extends React.Component {
     state = {
@@ -63,27 +64,31 @@ class NewWorkout extends React.Component {
             exercises = this.state.foundExercises
         } 
         return (
-            <div className="wo-div">
-                <div className="row all-ex-row">
-                    <LeftNavbar 
-                        currentPage={currentPage}
-                    />
-                    <div className="col-md-10 all-wo-main-col">
-                        <Breadcrumb />
-                        <div className="row all-wo-row">
-                            <AddedExercises addedExercises={addedExercises}/>
-                            <AllExercises 
-                                exercises={exercises}
-                                onClick={this.handleClick}
-                                value={this.state.search}
-                                handleSearch={this.handleSearch}
-                                handleChange={this.handleChange}
-                            />
+            <div className="main-div">
+                <Navbar current={currentPage} />
+                <div className="wo-div">
+                    <div className="row all-ex-row">
+                        <LeftNavbar 
+                            currentPage={currentPage}
+                        />
+                        <div className="col-md-10 all-wo-main-col">
+                            <Breadcrumb />
+                            <div className="row all-wo-row">
+                                <AddedExercises addedExercises={addedExercises}/>
+                                <AllExercises 
+                                    exercises={exercises}
+                                    onClick={this.handleClick}
+                                    value={this.state.search}
+                                    handleSearch={this.handleSearch}
+                                    handleChange={this.handleChange}
+                                />
+                            </div>
+                                    
                         </div>
-                                
                     </div>
                 </div>
             </div>
+            
         )
         
     }
