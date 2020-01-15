@@ -49,7 +49,7 @@ router.post("/register", parser.single("image"), (req, res)=>{
 });
 
 router.post("/login", passport.authenticate("local", {failureRedirect: "/login"}), (req, res)=>{
-    res.redirect("/");
+    res.redirect("/workout");
 });
 
 router.get("/logout", (req, res)=>{
