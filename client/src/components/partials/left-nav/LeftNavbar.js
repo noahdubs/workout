@@ -22,22 +22,11 @@ const LeftNavbar = props => {
 
 
     return (
-        <div className="col-md-2 left-nav">
-            <div className="dropdown sidebar sidebar-md">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownmenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <i class="far fa-caret-square-down"></i>
-				</button>
-                <div className="list group dropdown-menu" 
-                    id="navbar-left"
-                    aria-labelledby="dropdownMenu1"    
-                >
-                    <a href="/workout" id="Workouts" className="btn list-item-btn" style={addedStyles.Workouts}><i class="fas fa-dumbbell li-icon"></i> All workouts</a>
-                    <a href="/workout/new" id="NewWorkout" className="btn list-item-btn" style={addedStyles.NewWorkout}><i class="fas fa-plus li-icon"></i> New workout</a>
-                    <a href="/exercise" id="Exercises" className="btn list-item-btn" style={addedStyles.Exercises}><i class="fas fa-running li-icon"></i> All exercises</a>
-                    <a href="/exercise/new" id="NewExercise" className="btn list-item-btn" style={addedStyles.NewExercise}><i class="fas fa-plus li-icon"></i> New exercise</a>
-                </div>
-            </div>
-            
+        <div className="col-md-3 col-lg-2 left-nav">
+            <a href="/workout" id="Workouts" className="btn list-item-btn" style={addedStyles.Workouts}><i class="fas fa-dumbbell li-icon"></i> All workouts</a>
+            <a href="/workout/new" id="NewWorkout" className="btn list-item-btn" style={addedStyles.NewWorkout}><i class="fas fa-plus li-icon"></i> New workout</a>
+            <a href="/exercise" id="Exercises" className="btn list-item-btn" style={addedStyles.Exercises}><i class="fas fa-running li-icon"></i> All exercises</a>
+            <a href="/exercise/new" id="NewExercise" className="btn list-item-btn" style={addedStyles.NewExercise}><i class="fas fa-plus li-icon"></i> New exercise</a>
         </div>
     )
     

@@ -11,7 +11,7 @@ const WorkoutsContainer = props => {
                 <LeftNavbar 
                     currentPage={currentPage}
                 />
-                <div className="col-md-10 all-wo-main-col">
+                <div className="col-md-9 col-lg-10 all-wo-main-col">
                     <Search 
                         value={props.value}
                         onChange={props.onChange}

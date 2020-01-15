@@ -1,6 +1,5 @@
 import React from 'react'
 import AllExercises from './AllExercises'
-import Search from './Search'
 
 const Container = props => {
     return (

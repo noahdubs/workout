@@ -8,7 +8,7 @@ const About = ({ exercise }) => {
         <div className="wo-div">
             <div className="row all-ex-row">
                 <LeftNavbar />
-                <div className="col-md-10 all-wo-main-col">
+                <div className="col-md-9 col-lg-10 all-wo-main-col">
                     <BreadCrumb exercise={exercise} />
                     <ExerciseHeading exercise={exercise} />
                 </div>

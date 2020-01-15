@@ -66,12 +66,15 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+}
+.image-cropper {
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
 }
 .profile-pic {
-    border-radius: 500px;
-    width: 80%;
     box-shadow: 0 0 8px #757575;
+    border-radius: 50%;
 }
 .user-pro-name{
     color: #008BEE;
@@ -83,6 +86,7 @@
 .user-pro-username {
     color: #5B5B5B;
     text-decoration: none;
+    margin-bottom: 30px;
 }
 .user-edit-btn {
     background-color: #008BEE;

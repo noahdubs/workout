@@ -71,7 +71,7 @@ class NewWorkout extends React.Component {
                         <LeftNavbar 
                             currentPage={currentPage}
                         />
-                        <div className="col-md-10 all-wo-main-col">
+                        <div className="col-md-9 col-lg-10 all-wo-main-col">
                             <Breadcrumb />
                             <div className="row all-wo-row">
                                 <AddedExercises addedExercises={addedExercises}/>

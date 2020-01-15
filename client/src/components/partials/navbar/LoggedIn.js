@@ -31,6 +31,20 @@ class LoggedIn extends React.Component {
                     <li className="nav-item">
                         <a href="/" onClick={this.logout} className="nav-link link-nav"><i className="fas fa-sign-out-alt icon"></i> Logout</a>
                     </li>
+                    <div className="hidden-div">
+                        <li className="nav-item">
+                            <a href="/workout" className="nav-link link-nav"><i class="fas fa-dumbbell"></i> All workouts</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/workout/new" className="nav-link link-nav"><i class="fas fa-plus"></i> New workout</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/exercise" className="nav-link link-nav"><i class="fas fa-running li-icon"></i> All exercises</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/exercise/new" className="nav-link link-nav"><i class="fas fa-plus"></i> New exercise</a>
+                        </li>
+                    </div>
                 </ul>
                 
             )
@@ -43,6 +57,20 @@ class LoggedIn extends React.Component {
                     <li className="nav-item">
                         <a href="/register" className="nav-link link-nav"><i className="fas fa-user-plus icon"></i> Register</a>
                     </li>
+                    <div className="hidden-div">
+                        <li className="nav-item">
+                            <a href="/workout" className="nav-link link-nav"><i class="fas fa-dumbbell coll-icon"></i> All workouts</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/workout/new" className="nav-link link-nav"><i class="fas fa-plus coll-icon"></i> New workout</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/exercise" className="nav-link link-nav"><i class="fas fa-running coll-icon"></i> All exercises</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/exercise/new" className="nav-link link-nav"><i class="fas fa-plus coll-icon"></i> New exercise</a>
+                        </li>
+                    </div>
                 </ul>
                 
             )
