@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Landing from '../landing/Landing'
-import Navbar from '../partials/navbar/Navbar'
 
 import Register from '../index/register/Register'
 import Login from '../index/login/Login'

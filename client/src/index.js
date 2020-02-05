@@ -15,4 +15,4 @@ import './styles/new-exercise.css'
 import './styles/user.css'
 import './styles/landingMedia.css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));
