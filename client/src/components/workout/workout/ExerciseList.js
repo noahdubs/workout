@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExerciseList = ({ exercises }) => {
     return (
-        <div className="well">
+        <div className="ex-list-row">
             {exercises.map(exercise => (
                 <div className="row ex-one">
                     <div className="col-md-3 img-div">

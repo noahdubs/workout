@@ -17,7 +17,9 @@
 .ex-information {
     font-size: 15px;
 }
-
+.ex-list-row {
+    width: 100%;
+}
 .wo-general {
     background-color: #236192;
     padding: 2em;
@@ -26,6 +28,7 @@
     margin-bottom: 3em;
 }
 .ex-one {
+    width: 100%;
     padding: 1em ;
     border-top: 2px solid #CFCFCF;
 }
