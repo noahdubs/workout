@@ -7,6 +7,9 @@
 .img-div {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    font-size: 35px;
+    color: #008BEE;
 }
 .wo-div {
     margin-top: 4em;
@@ -43,15 +46,13 @@
     padding-top: 50px;
 }
 .ind-wo-ex-img {
-    width: 100%;
+    width: 75%;
     height: 130px;
 }
-.ind-wo-ex-name {
-    color: #008BEE;
-}
+
 .ind-wo-ex-name:hover,
 .ind-wo-ex-name:focus {
-    color: #008BEE;
+    color: black;
     text-decoration: none;
 }
 .ind-wo-ex-rs {
@@ -67,4 +68,10 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 30px;
+}
+.num-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }

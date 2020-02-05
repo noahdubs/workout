@@ -4,6 +4,7 @@
     color: #008BEE;
     padding-bottom: 13px;
     font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .brand-name {
     padding-left: 10%;
@@ -29,6 +30,7 @@
 .toggler {
     color: white;
 }
+
 @media screen and (max-width: 767px){
     .navbar-collapse {
         background: #008BEE;

@@ -16,6 +16,7 @@ const WorkoutsContainer = props => {
                         value={props.value}
                         onChange={props.onChange}
                         onClick={props.onClick}
+                        handleEnter={props.handleEnter}
                     />
                     <ShowWorkouts workouts={props.workouts} />
                 </div>

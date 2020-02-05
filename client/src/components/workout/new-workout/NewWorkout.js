@@ -55,6 +55,13 @@ class NewWorkout extends React.Component {
         
     }
 
+    handleEnter = event => {
+        let button = document.getElementById("new-wo-btn")
+        if(event.key === "Enter"){
+            button.click()
+        }
+    }
+
     render() {
         const addedExercises = this.state.addedExercises
         const foundExercises = this.state.foundExercises
@@ -81,6 +88,7 @@ class NewWorkout extends React.Component {
                                     value={this.state.search}
                                     handleSearch={this.handleSearch}
                                     handleChange={this.handleChange}
+                                    handleEnter={this.handleEnter}
                                 />
                             </div>
                                     

@@ -9,9 +9,10 @@ const Search = props => {
                 placeholder="Search Workouts"
                 onChange={props.onChange} 
                 value={props.value}
-                name="search"   
+                name="search" 
+                onKeyDown={props.handleEnter}  
             />
-            <button className="btn-search-icon" onClick={props.onClick}>
+            <button className="btn-search-icon" onClick={props.onClick} id="myBTN">
                 <i class="fas fa-search"></i>
             </button>
         </div>

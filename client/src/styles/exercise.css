@@ -78,8 +78,9 @@
     line-height: 24px;
 }
 .ex-pic {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    max-height: 100%;
+    margin-bottom: 20px;
 }
 .description {
     margin-top: 50px;
@@ -89,7 +90,6 @@
    display: inline;
    align-items: center;
    margin-top: 45px;
-   height: 100%;
 }
 .ind-ex-h {
     color: #008BEE;

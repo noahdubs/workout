@@ -9,8 +9,9 @@ const Search = props => {
                 onChange={props.handleChange} 
                 value={props.value}
                 name="search"   
+                onKeyDown={props.handleEnter}
             />
-            <button className="btn-search-icon" onClick={props.handleSearch}>
+            <button className="btn-search-icon" onClick={props.handleSearch} id="new-wo-btn">
                 <i class="fas fa-search"></i>
             </button>
         </div>

@@ -19,9 +19,9 @@ const Exercises = ({ user }) => {
                                     {exercise.name}
                                 </h5>
                             </a>
-                            <p className="new-ex-item"><span>Type:</span> {exercise.exerciseType}</p>
-                            <p className="new-ex-item"><span>Muscles:</span> {exercise.muscleGroup}</p>
-                            <p className="new-ex-item"><span>Equipment:</span> {exercise.equipment}</p>
+                            <p className="new-ex-item"><span className="all-ex-info">Type:</span> {exercise.exerciseType}</p>
+                            <p className="new-ex-item"><span className="all-ex-info">Muscles:</span> {exercise.muscleGroup}</p>
+                            <p className="new-ex-item"><span className="all-ex-info">Equipment:</span> {exercise.equipment}</p>
                         </div>
                     </div>
                 </div>

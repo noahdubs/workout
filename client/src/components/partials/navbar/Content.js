@@ -2,7 +2,6 @@ import React from 'react'
 import LoggedIn from './LoggedIn'
 
 const Content = ({ styles }) => {
-    console.log(styles)
     return (
         <nav className="navbar fixed-top navbar-expand-md navbar-dark nav-custom" style={styles}>
             <a href="/" className="navbar-brand brand-name">Total Fitness <i className="fas fa-running"></i></a>

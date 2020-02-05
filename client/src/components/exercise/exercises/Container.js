@@ -14,6 +14,7 @@ const Container = props => {
                         handleChange={props.handleChange}
                         handleSearch={props.handleSearch}
                         search={props.search}
+                        handleEnter={props.handleEnter}
                     />
                     <AllExercises 
                         exercises={props.exercises}

@@ -8,6 +8,7 @@ const AllExercises = props => {
                 value={props.value}
                 handleSearch={props.handleSearch}
                 handleChange={props.handleChange}
+                handleEnter={props.handleEnter}
             />
             {props.exercises.map(exercise => (
                 <div className="row new-ex-card" key={exercise._id}>

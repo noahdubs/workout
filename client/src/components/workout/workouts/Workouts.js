@@ -37,6 +37,13 @@ class Workout extends React.Component {
         this.setState({foundWorkouts:foundWorkouts})
     }
 
+    handleEnter = event => {
+        let button = document.getElementById("myBTN")
+        if(event.key === "Enter"){
+            button.click()
+        }
+    }
+
     render() {
         let workouts = this.state.workouts
         const foundWorkouts = this.state.foundWorkouts
@@ -53,6 +60,7 @@ class Workout extends React.Component {
                     onChange={this.handleChange}
                     onClick={this.handleSearch}
                     workouts={workouts}
+                    handleEnter={this.handleEnter}
                 />
             </div>
                 

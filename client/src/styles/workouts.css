@@ -37,6 +37,9 @@
     background-color: #EEEEEE;
     box-shadow: 0 0 8px #757575;
 }
+.wo-card:hover {
+    box-shadow: 0 0 8px 2px #5b5b5b;
+}
 .wo-sm-btn {
     background-color: #236192;
     width: 7em;
@@ -45,7 +48,7 @@
 .all-wo-h {
     display: flex;
     justify-content: start;
-    height: 70px;
+    height: 80px;
     padding-bottom: 2em;
     border-bottom: 2px solid #CFCFCF;
     padding-top: 1.5em;
@@ -55,6 +58,7 @@
     border: 2px solid #008BEE !important;
 }
 .all-wo-h1 {
+    margin-left: 10px;
     margin-right: 2em;
     font-weight: 500;
 }
@@ -83,9 +87,12 @@
     margin-right: .5em;
 }
 .card-title {
-    color: #474747;
+    color: #5b5b5b;
     font-weight: 600;
     font-size: 16px;
+}
+.card-title:hover {
+    color: black
 }
 .all-wo-title-link:hover {
     text-decoration: none;
@@ -113,4 +120,5 @@
     height: calc(100% - 150px);
     box-sizing: border-box;
 } 
+
 
