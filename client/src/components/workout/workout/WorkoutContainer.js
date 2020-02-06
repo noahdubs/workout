@@ -1,6 +1,5 @@
 import React from 'react'
 import WorkoutHeading from './WorkoutHeading'
-import ExerciseList from './ExerciseList'
 import LeftNavbar from '../../partials/left-nav/LeftNavbar'
 import Breadcrumb from './Breadcrumb' 
 

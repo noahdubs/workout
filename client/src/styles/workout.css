@@ -52,7 +52,9 @@
     width: 75%;
     height: 130px;
 }
-
+.ind-wo-ex-name {
+    color: #008BEE;
+}
 .ind-wo-ex-name:hover,
 .ind-wo-ex-name:focus {
     color: black;
@@ -77,4 +79,9 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+}
+.ind-wo-about {
+    color: #008BEE;
+    border-bottom: 2px solid #CFCFCF;
+    padding: 0 0 5px 0;
 }

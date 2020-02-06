@@ -16,7 +16,7 @@ const ExerciseHeading = ({ exercise }) => {
                 <p> Submitted by 
                     <a href={`/users/${exercise.author.id}`} className="new-wo-ex-title"> {exercise.author.username}</a>
                 </p>
-                <h3 className="ind-ex-h">How to perform {exercise.name}:</h3>
+                <h3 className="ind-ex-how-to">How to perform:</h3>
                 <p>{exercise.description}</p>
                 <LoggedIn exercise={exercise}/>
             </div>

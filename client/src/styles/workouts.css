@@ -47,7 +47,7 @@
 }
 .all-wo-h {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     height: 80px;
     padding-bottom: 2em;
     border-bottom: 2px solid #CFCFCF;

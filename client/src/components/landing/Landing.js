@@ -12,7 +12,7 @@ const Landing = () => {
                     <p className="landing-p">Our selection of workouts will have you well on your way to
                         achieving your goals.</p>
                     <div className="btn-div">
-                        <a href="/workouts" className="btn new-landing-btn">See workouts  <i class="fas fa-dumbbell landing-icon"></i></a>
+                        <a href="/workout" className="btn new-landing-btn">See workouts  <i class="fas fa-dumbbell landing-icon"></i></a>
                     </div>
                 </div>
             </div>

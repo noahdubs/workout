@@ -97,4 +97,9 @@
 .ind-ex-row {
     padding-top: 20px;
 }
+.ind-ex-how-to {
+    color: #008BEE;
+    border-bottom: 2px solid #cfcfcf;
+    padding: 10px 0 5px 0;
+}
 

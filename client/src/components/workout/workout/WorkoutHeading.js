@@ -10,7 +10,7 @@ const WorkoutHeading = ({ workout }) => {
                 <img className="img-responsive ex-pic" src={workout.picture.url} alt={workout.name}/>
             </div>
             <div className="col-md-5 ex-info">
-                <h3 className="ind-ex-h">About {workout.name}:</h3>
+                <h3 className="ind-wo-about">About {workout.name}:</h3>
                 <p>{workout.description}</p>
                 <p className="ind-wo-author"> Submitted by 
                     <a href={`/users/${workout.author.id}`} className="new-wo-ex-title"> {workout.author.username}</a>
