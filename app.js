@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(methodOverride("_method"));
 app.use(flash());
-app.use(express.static("client/build"));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 mongoose.connect(`mongodb+srv://noahdubs:${process.env.CLUSTER_PASSWORD}@cluster0-wbttr.mongodb.net/workout?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -56,4 +56,4 @@ app.get("*", (req, res)=> {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 })
 
-app.listen(process.env.PORT, ()=> {console.log("starting on port " + process.env.PORT);});
+app.listen(process.env.PORT, ()=> {console.log("starting on port " + process.env.PORT);}); 
