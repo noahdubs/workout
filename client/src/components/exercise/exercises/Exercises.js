@@ -31,6 +31,9 @@ class Exercises extends React.Component {
                 foundExercises.push(exercise)
             } 
         })
+        if(foundExercises.length < 1){
+            alert("No exercises found with that name.")
+        }
         this.setState({foundExercises: foundExercises})
     }
 

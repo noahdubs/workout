@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = props => {
     return (
-        <form action="/api/register" method="POST" encType="multipart/form-data"> 
+        <form className="reg-form" action="/api/register" method="POST" encType="multipart/form-data"> 
             <h2 className="form-name">Register</h2>
             <div className="form-group">
                 <label>Your Name</label>

@@ -126,5 +126,10 @@
     margin: 0 auto;
     padding-top: 2em;
     font-size: 20px;
+    color: #008BEE;
+}
+.new-wo-add-ex:hover {
+    color: black;
+    text-decoration: none;
 }
 

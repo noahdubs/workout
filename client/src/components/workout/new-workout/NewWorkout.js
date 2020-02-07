@@ -51,6 +51,9 @@ class NewWorkout extends React.Component {
                 foundExercises.push(exercise)
             } 
         })
+        if(foundExercises.length < 1){
+            alert("No exercises found")
+        }
         this.setState({foundExercises: foundExercises})
         
     }

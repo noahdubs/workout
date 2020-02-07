@@ -4,8 +4,8 @@ import Form from './Form'
 const Container = props => {
     return (
         <div className="row reg-div">
-            <div className="col-md-3"></div>
-            <div className="col-md-6 form-content">
+            <div className="col-md-2"></div>
+            <div className="col-md-8 form-content">
                 <Form 
                     handleChange={props.handleChange}
                     name={props.name}
@@ -13,7 +13,7 @@ const Container = props => {
                     password={props.password}
                 />
             </div>
-            <div className="col-md-3"></div>
+            <div className="col-md-2"></div>
         </div>
     )
 }

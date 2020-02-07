@@ -67,3 +67,15 @@
 .file-control {
     border: none;
 }
+
+.reg-div {
+    height: 100%;
+}
+.form-content {
+    height: 100%;
+}
+.reg-form {
+    padding-right: 20px;
+    height: 100%;
+    overflow: scroll;
+}
