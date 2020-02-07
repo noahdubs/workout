@@ -121,4 +121,19 @@
     box-sizing: border-box;
 } 
 
+@media (max-width: 420px) {
+    .all-wo-h1 {
+        font-size: 1.4rem;
+        margin-right: 15px;
+    }
+    #wo-search-bar {
+        width: 48%;
+    }
+    .btn-search-icon {
+        width: 30px;
+        margin-left: -30px;
+        font-size: 14px;
+    }
+}
+
 

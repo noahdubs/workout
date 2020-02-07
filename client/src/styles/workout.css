@@ -85,3 +85,73 @@
     border-bottom: 2px solid #CFCFCF;
     padding: 0 0 5px 0;
 }
+
+
+@media (max-width: 360px) {
+    .bc-active {
+        font-size: 12px;
+    }
+    .bc-before {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .bread-crumb { 
+        height: 60px;
+    }
+    .ind-ex-h {
+        font-size: 2rem;
+    }
+    .ex-pic {
+        width: 100%;
+    }
+    .ind-wo-about {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 16px;
+    }
+    .new-wo-h {
+        padding-top: 20px ;
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media (min-width: 360px) {
+    .bc-active {
+        font-size: 14px;
+    }
+    .bc-before {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .bread-crumb { 
+        height: 60px;
+    }
+    .ex-pic {
+        width: 100%;
+    }
+    .new-wo-h {
+        padding-top: 20px ;
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+@media (min-width: 421px) {
+    .bc-active {
+        font-size: 18px;
+    }
+    .bc-before {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .bread-crumb { 
+        height: 80px;
+    }
+    .all-wo-row {
+        padding-top: 20px;
+    }
+    .ex-pic {
+        width: 60%;
+    }
+}
